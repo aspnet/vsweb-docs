@@ -25,4 +25,9 @@ coming soon...
 coming soon...
 
 ## Internet Explorer integration
-coming soon...
+Internet Explorers developer tools automatically recognizes when
+Browser Link is running on a web page. When inspecting an element,
+Visual Studio will automatically open the source file that generated
+that element in the DOM.
+
+![Internet Explorer Integration](_assets/browserlink-ie-integration.png)

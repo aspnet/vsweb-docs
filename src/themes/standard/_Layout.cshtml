@@ -24,7 +24,7 @@
 	<meta property="og:title" content="@Page.Title" />
 	<meta property="og:description" content="@Page.Description" />
 	<meta property="og:type" content="product" />
-	<meta property="og:url" content="@baseUrl" />
+	<meta property="og:url" content="@(baseUrl + Request.RawUrl)" />
 	<meta property="og:image" content="@(baseUrl + "/themes/standard/favicon/mstile-310x310.png")" />
 
 	<link rel="apple-touch-icon" sizes="57x57" href="/themes/standard/favicon/apple-touch-icon-57x57.png">
