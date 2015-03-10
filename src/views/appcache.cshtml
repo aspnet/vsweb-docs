@@ -1,0 +1,73 @@
+﻿@using System.Configuration;
+@using System.IO;
+@using System.Text;
+CACHE MANIFEST
+
+@{
+	Response.ContentType = "text/cache-manifest";
+	DateTime date = PageSystem.SetCacheHeaders(Context);
+
+	@("# last modified: " + date.ToString("r"))
+
+	if (Request.IsLocal)
+	{
+		Response.StatusCode = 404;
+	}
+}
+
+@CreateUrlList()
+
+NETWORK:
+*
+
+@functions {
+
+	string CreateUrlList()
+	{
+		StringBuilder sb = new StringBuilder();
+
+		string themesFolder = Server.MapPath("/themes/" + ConfigurationManager.AppSettings["theme"]);
+		string pageFolder = Server.MapPath(ConfigurationManager.AppSettings["pageFolder"]);
+
+		List<string> imageExtension = new List<string> { ".gif", ".png", ".jpg" };
+		List<string> extensions = new List<string> { ".js", ".css", ".woff", ".ttf", ".eot" };
+
+		// Pages
+		sb.AppendLine("# pages");
+		sb.AppendLine("/");
+		CreatePageList(PageSystem.IndexPage.Children, sb);
+
+		// Theme assets
+		sb.AppendLine(Environment.NewLine + "# theme assets");
+		foreach (string file in Directory.GetFiles(themesFolder, "*.*", SearchOption.AllDirectories))
+		{
+			if (extensions.Contains(Path.GetExtension(file)))
+			{
+				string relative = file.Replace(Server.MapPath("~/"), string.Empty).Replace("\"", "/");
+				sb.AppendLine(Helpers.Fingerprint("/" + relative));
+			}
+		}
+
+		// Page assets
+		sb.AppendLine(Environment.NewLine + "# page assets");
+		foreach (string file in Directory.EnumerateFiles(pageFolder, "*.*", SearchOption.AllDirectories))
+		{
+			if (imageExtension.Contains(Path.GetExtension(file)))
+			{
+				string relative = file.Replace(Path.GetDirectoryName(pageFolder), string.Empty).Replace("\"", "/").ToLowerInvariant();
+				sb.AppendLine(Helpers.Fingerprint(relative));
+			}
+		}
+
+		return sb.ToString();
+	}
+
+	void CreatePageList(IEnumerable<MarkdownPage> pages, StringBuilder sb)
+	{
+		foreach (MarkdownPage page in pages.Where(p => p.ShowInMenu))
+		{
+			sb.AppendLine(Helpers.CreateLink(page));
+			CreatePageList(page.Children, sb);
+		}
+	}
+}

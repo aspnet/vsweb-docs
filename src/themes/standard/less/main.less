@@ -1,0 +1,67 @@
+﻿@import "variables";
+
+main {
+	display: block;
+	min-height: 500px;
+	margin-right: @menu-width + 40px;
+	padding-bottom: @footer-height;
+	opacity: 1;
+	-moz-transition: opacity .3s ease;
+	-o-transition: opacity .3s ease;
+	-webkit-transition: opacity .3s ease;
+	transition: opacity .3s ease;
+
+	article > p {
+		padding-bottom: 20px;
+		border-bottom: 1px solid @menu-background-color;
+	}
+
+	article ul {
+		list-style: none;
+		padding: 0 0 40px 0;
+
+		a {
+			padding-left: 25px;
+			background: no-repeat left;
+		}
+
+		a[href*="github.com"] {
+			background-image: url(/themes/standard/img/github.min.svg);
+		}
+
+		a[href*="visualstudiogallery.msdn.microsoft.com"] {
+			background-image: url(/themes/standard/img/vs.min.svg);
+		}
+
+		a[href*="codeplex.com"] {
+			background-image: url(/themes/standard/img/codeplex.min.svg);
+		}
+	}
+
+	aside {
+		overflow: hidden;
+
+		h2 {
+			padding-top: @container-padding;
+			border-top: 1px solid @menu-background-color;
+		}
+
+		section {
+			float: left;
+			margin-right: 50px;
+
+			h3 {
+				margin: 0;
+			}
+
+			ul {
+				padding: 0;
+			}
+
+			a {
+				padding: 0;
+				background: none !important;
+			}
+		}
+	}
+}

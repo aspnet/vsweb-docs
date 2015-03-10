@@ -1,0 +1,56 @@
+﻿@import "variables";
+
+header {
+	background: @header-background-color;
+	color: @header-color;
+	line-height: 60px;
+	height: 60px;
+	font-size: 1.4em;
+	margin-bottom: 0;
+
+	a {
+		color: @header-color;
+
+		&:hover {
+			color: @header-color;
+		}
+	}
+
+	.download {
+		margin-right: 5px;
+	}
+}
+
+#hero {
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: cover;
+	width: 100%;
+	color: white;
+	background-color: #0c0c0c;
+	text-shadow: 1px 1px #0c0c0c;
+	overflow: hidden;
+	max-height: 300px;
+	-moz-transition: max-height .4s linear;
+	-o-transition: max-height .4s linear;
+	-webkit-transition: max-height .4s linear;
+	transition: max-height .4s linear;
+	will-change: max-height;
+
+	h1 {
+		margin: @container-padding 0 0 0;
+	}
+
+	p {
+		font-size: 18px;
+		margin-right: @menu-width + 40px;
+	}
+
+	ul {
+		margin: 0 0 @container-padding 0;
+	}
+
+	&.hide {
+		max-height: 0;
+	}
+}

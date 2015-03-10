@@ -1,0 +1,12 @@
+﻿<article>
+	@if (Model.Parent != null)
+	{
+		<h1>@Model.Title</h1>
+		<p>@Model.Description</p>
+	}
+	<div>
+		@Helpers.RenderContent(Model)
+	</div>
+</article>
+
+<a id="contribute" href="@PageSystem.GetEditPage(Model)">Edit this page on GitHub</a>
