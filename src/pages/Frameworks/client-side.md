@@ -27,7 +27,10 @@ as well as HTML properties and template bindings.
 ![Angular Intellisense](_assets/frameworks-angular.gif)
 
 ## React.js
-coming soon...
+Full JavaScript editing support with dynamic Intellisenes as well as
+a brand new editor for JSX syntax.
+
+![React JSX editor](_assets/frameworks-react.png)
 
 ## Bootstrap CSS
 Visual studio makes it easy to identify what classes are coming from the 
