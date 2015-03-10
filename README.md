@@ -1,12 +1,6 @@
-## MarkSite - An ASP.NET based Markdown CMS
+## Visual Studio features for web developers
 
-A great system for:
-
-- Community driven documentation
-- A personal website
-- Company website with multiple contributors
-
-[![Build status](https://ci.appveyor.com/api/projects/status/os59p2cm7s2wk3sr?svg=true)](https://ci.appveyor.com/project/madskristensen/marksite)
+[![Build status](https://ci.appveyor.com/api/projects/status/d216u57smv7ukj92?svg=true)](https://ci.appveyor.com/project/madskristensen/vsweb-docs)
 
 [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
