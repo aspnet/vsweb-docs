@@ -4,7 +4,7 @@
 
 [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
-Live demo: [vwd.azurewebsites.net](http://vwd.azurewebsites.net)
+Website: [vsweb.azurewebsites.net/](http://vsweb.azurewebsites.net/)
 
 ### Features
 
