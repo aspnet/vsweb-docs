@@ -6,7 +6,8 @@
 		burger = document.getElementById("burger"),
 		main = document.getElementsByTagName("main")[0],
 		hero = document.getElementById("hero"),
-	    images = main.getElementsByTagName("img");
+	    images = main.getElementsByTagName("img"),
+		fadingInProgress = false;
 
     function syncMenu() {
 
@@ -122,8 +123,9 @@
                     }
                 }, 200)
 
-                setFlipAheadLinks(page.next, page.prev);
                 images = main.getElementsByTagName("img")
+                fadeImagesIntoView();
+                setFlipAheadLinks(page.next, page.prev);
 
                 main.style.opacity = 1;
                 syncMenu();
@@ -170,16 +172,24 @@
     }
 
     function fadeImagesIntoView() {
-        var height = window.innerHeight || document.documentElement.clientHeight;
-        for (var i = 0; i < images.length; i++) {
-            var image = images[i];
+        if (fadingInProgress) return;
 
-            var rect = image.getBoundingClientRect();
-            image.style.opacity = rect.top >= -50 && rect.bottom <= height ? 1 : 0;
+        fadingInProgress = true;
 
-            if (rect.bottom > height)
-                break;
-        }
+        setTimeout(function () {
+            var height = window.innerHeight || document.documentElement.clientHeight;
+            for (var i = 0; i < images.length; i++) {
+                var image = images[i];
+
+                var rect = image.getBoundingClientRect();
+                image.style.opacity = rect.top >= -50 && rect.bottom <= height ? 1 : 0;
+
+                if (rect.bottom > height)
+                    break;
+            }
+
+            fadingInProgress = false;
+        }, 200);
     }
 
     document.body.addEventListener("click", onBodyClick, false);
