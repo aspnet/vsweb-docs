@@ -146,11 +146,13 @@ var dataService = (function () {
                 main.innerHTML = page.content;
                 document.title = page.title;
 
-                var index = url.indexOf("#");
-                if (index > 0) {
-                    var target = document.getElementById(url.substring(index + 1))
-                    target.scrollIntoView();
-                }
+                setTimeout(function () {
+                    var index = url.indexOf("#");
+                    if (index > 0) {
+                        var target = document.getElementById(url.substring(index + 1))
+                        target.scrollIntoView();
+                    }
+                }, 200)
 
                 setFlipAheadLinks(page.next, page.prev);
                 images = main.getElementsByTagName("img")
