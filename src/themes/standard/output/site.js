@@ -203,11 +203,12 @@ var dataService = (function () {
         var height = window.innerHeight || document.documentElement.clientHeight;
         for (var i = 0; i < images.length; i++) {
             var image = images[i];
-            if (image.src.indexOf(".gif") === -1)
-                continue;
 
             var rect = image.getBoundingClientRect();
-            image.style.opacity = rect.top >= 0 && rect.bottom <= height ? 1 : 0.1;
+            image.style.opacity = rect.top >= -50 && rect.bottom <= height ? 1 : 0;
+
+            if (rect.bottom > height)
+                break;
         }
     }
 
