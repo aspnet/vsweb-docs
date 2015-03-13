@@ -37,7 +37,8 @@ var dataService = (function () {
     var nav = document.getElementById("nav"),
 		burger = document.getElementById("burger"),
 		main = document.getElementsByTagName("main")[0],
-		hero = document.getElementById("hero");
+		hero = document.getElementById("hero"),
+	    images = main.getElementsByTagName("img");
 
     function syncMenu() {
 
@@ -152,6 +153,7 @@ var dataService = (function () {
                 }
 
                 setFlipAheadLinks(page.next, page.prev);
+                images = main.getElementsByTagName("img")
 
                 main.style.opacity = 1;
                 syncMenu();
@@ -197,6 +199,18 @@ var dataService = (function () {
         hero.className = showHero ? "" : "hide";
     }
 
+    function fadeImagesIntoView() {
+        var height = window.innerHeight || document.documentElement.clientHeight;
+        for (var i = 0; i < images.length; i++) {
+            var image = images[i];
+            if (image.src.indexOf(".gif") === -1)
+                continue;
+
+            var rect = image.getBoundingClientRect();
+            image.style.opacity = rect.top >= 0 && rect.bottom <= height ? 1 : 0.1;
+        }
+    }
+
     document.body.addEventListener("click", onBodyClick, false);
 
     window.addEventListener("popstate", function (e) {
@@ -204,6 +218,8 @@ var dataService = (function () {
             replaceContent(location.pathname);
     });
 
+    window.addEventListener("scroll", fadeImagesIntoView, false);
+    window.addEventListener("load", fadeImagesIntoView, false);
 })();
 (function () {
 

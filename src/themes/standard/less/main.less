@@ -1,67 +1,75 @@
 ﻿@import "variables";
 
 main {
-	display: block;
-	min-height: 500px;
-	margin-right: @menu-width + 40px;
-	padding-bottom: @footer-height;
-	opacity: 1;
-	-moz-transition: opacity .3s ease;
-	-o-transition: opacity .3s ease;
-	-webkit-transition: opacity .3s ease;
-	transition: opacity .3s ease;
+    display: block;
+    min-height: 500px;
+    margin-right: @menu-width + 40px;
+    padding-bottom: @footer-height;
+    opacity: 1;
+    -moz-transition: opacity .3s ease;
+    -o-transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+    transition: opacity .3s ease;
 
-	article > p {
-		padding-bottom: 20px;
-		border-bottom: 1px solid @menu-background-color;
-	}
+    article > p {
+        padding-bottom: 20px;
+        border-bottom: 1px solid @menu-background-color;
+    }
 
-	article ul {
-		list-style: none;
-		padding: 0 0 40px 0;
+    article img[src$=".gif"] {
+        opacity: 0;
+        -moz-transition: opacity 2s ease;
+        -o-transition: opacity 2s ease;
+        -webkit-transition: opacity 2s ease;
+        transition: opacity 2s ease;
+    }
 
-		a {
-			padding-left: 25px;
-			background: no-repeat left;
-		}
+    article ul {
+        list-style: none;
+        padding: 0 0 40px 0;
 
-		a[href*="github.com"] {
-			background-image: url(/themes/standard/img/github.min.svg);
-		}
+        a {
+            padding-left: 25px;
+            background: no-repeat left;
+        }
 
-		a[href*="visualstudiogallery.msdn.microsoft.com"] {
-			background-image: url(/themes/standard/img/vs.min.svg);
-		}
+        a[href*="github.com"] {
+            background-image: url(/themes/standard/img/github.min.svg);
+        }
 
-		a[href*="codeplex.com"] {
-			background-image: url(/themes/standard/img/codeplex.min.svg);
-		}
-	}
+        a[href*="visualstudiogallery.msdn.microsoft.com"] {
+            background-image: url(/themes/standard/img/vs.min.svg);
+        }
 
-	aside {
-		overflow: hidden;
+        a[href*="codeplex.com"] {
+            background-image: url(/themes/standard/img/codeplex.min.svg);
+        }
+    }
 
-		h2 {
-			padding-top: @container-padding;
-			border-top: 1px solid @menu-background-color;
-		}
+    aside {
+        overflow: hidden;
 
-		section {
-			float: left;
-			margin-right: 50px;
+        h2 {
+            padding-top: @container-padding;
+            border-top: 1px solid @menu-background-color;
+        }
 
-			h3 {
-				margin: 0;
-			}
+        section {
+            float: left;
+            margin-right: 50px;
 
-			ul {
-				padding: 0;
-			}
+            h3 {
+                margin: 0;
+            }
 
-			a {
-				padding: 0;
-				background: none !important;
-			}
-		}
-	}
+            ul {
+                padding: 0;
+            }
+
+            a {
+                padding: 0;
+                background: none !important;
+            }
+        }
+    }
 }
