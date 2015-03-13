@@ -17,5 +17,5 @@ existing skills with Visual Studio’s state-of-the-art development
 environment for .NET languages, HTML/JavaScript, and C++. 
 
 For teams working across multiple platforms, Visual Studio provides a 
-flexible collaboration environment for that welcomes connection 
+flexible collaboration environment that welcomes connection 
 with other development tools, such as Eclipse and Xcode.
