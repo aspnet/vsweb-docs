@@ -35,7 +35,7 @@ is located in a subfolder of an existing website.
 
 ## Model driven development
 The models used in an ASP.NET application can be annotated to provide
-a wide arrange of experiences such as database schema generation,
+a wide range of experiences such as database schema generation,
 view scaffolding, client- and server-side validation and more.
 
 ### Model annotations
