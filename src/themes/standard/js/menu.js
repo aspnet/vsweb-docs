@@ -2,166 +2,174 @@
 
 (function () {
 
-	var nav = document.getElementById("nav"),
+    var nav = document.getElementById("nav"),
 		burger = document.getElementById("burger"),
 		main = document.getElementsByTagName("main")[0],
 		hero = document.getElementById("hero");
 
-	function syncMenu() {
+    function syncMenu() {
 
-		var open = nav.getElementsByClassName("open");
-		for (var i = 0; i < open.length; i++) {
-			// this is for popstate to adjust the menu
-			open[i].removeAttribute("class");
-		}
+        var open = nav.getElementsByClassName("open");
+        for (var i = 0; i < open.length; i++) {
+            // this is for popstate to adjust the menu
+            open[i].removeAttribute("class");
+        }
 
-		if (location.pathname === "/")
-			return;
+        if (location.pathname === "/")
+            return;
 
-		var active = nav.getElementsByClassName("active");
+        var active = nav.getElementsByClassName("active");
 
-		if (active.length === 0)
-			return;
+        if (active.length === 0)
+            return;
 
-		var li = active[0].parentNode;
+        var li = active[0].parentNode;
 
-		do {
+        do {
 
-			if (li.tagName === "LI" && li.childElementCount === 2) {
-				li.className = "open";
-			}
+            if (li.tagName === "LI" && li.childElementCount === 2) {
+                li.className = "open";
+            }
 
-			li = li.parentNode;
+            li = li.parentNode;
 
-		} while (li.parentNode !== nav);
-	}
+        } while (li.parentNode !== nav);
+    }
 
-	function onBodyClick(e) {
+    function onBodyClick(e) {
 
-		var href = e.target.getAttribute("href");
+        var href = e.target.getAttribute("href");
 
-		if (e.target.tagName !== "A" || href.indexOf("#") === 0)
-			return;
+        if (e.target.tagName !== "A" || href.indexOf("#") === 0)
+            return;
 
-		if (location.pathname === href) {
-			e.preventDefault();
-			return;
-		}
+        if (location.pathname === href) {
+            e.preventDefault();
+            return;
+        }
 
-		if (e.target.id === burger.id) {
-			onBurgerClick(e);
-		}
-		else if (e.target.nextElementSibling) {
-			expandMenuParent(e);
-		}
-		else if (href.indexOf("://") === -1) {
-			onLocalLinkClick(e, href);
-		}
-	}
+        if (e.target.id === burger.id) {
+            onBurgerClick(e);
+        }
+        else if (e.target.nextElementSibling) {
+            expandMenuParent(e);
+        }
+        else if (href.indexOf("://") === -1) {
+            onLocalLinkClick(e, href);
+        }
+    }
 
-	function expandMenuParent(e) {
-		e.preventDefault();
+    function expandMenuParent(e) {
+        e.preventDefault();
 
-		var parent = e.target.parentNode;
+        var parent = e.target.parentNode;
 
-		if (parent.tagName !== "LI")
-			return;
+        if (parent.tagName !== "LI")
+            return;
 
-		parent.className = parent.className === "" ? "open" : "";
+        parent.className = parent.className === "" ? "open" : "";
 
-		// Close all other open menu items
-		var open = nav.getElementsByClassName("open");
-		for (var i = 0; i < open.length; i++) {
-			if (parent !== open[i])
-				open[i].removeAttribute("class");
-		}
-	}
+        // Close all other open menu items
+        var open = nav.getElementsByClassName("open");
+        for (var i = 0; i < open.length; i++) {
+            if (parent !== open[i])
+                open[i].removeAttribute("class");
+        }
+    }
 
-	function onLocalLinkClick(e, url) {
-		e.preventDefault();
-		e.target.setAttribute("data-spinner", "true");
+    function onLocalLinkClick(e, url) {
+        e.preventDefault();
+        e.target.setAttribute("data-spinner", "true");
 
-		history.pushState("pushed", null, url);
-		replaceContent(url, e.target);
-	}
+        history.pushState("pushed", null, url);
+        replaceContent(url, e.target);
+    }
 
-	function setMenuActive() {
-		var actives = nav.getElementsByClassName("active");
-		for (var a = 0; a < actives.length; a++) {
-			actives[a].removeAttribute("class");
-		}
+    function setMenuActive() {
+        var actives = nav.getElementsByClassName("active");
+        for (var a = 0; a < actives.length; a++) {
+            actives[a].removeAttribute("class");
+        }
 
-		var current = nav.querySelector("[href='" + location.pathname + "']")
-		if (current)
-			current.className = "active";
-	}
+        var current = nav.querySelector("[href='" + location.pathname + "']")
+        if (current)
+            current.className = "active";
+    }
 
-	function replaceContent(url, target) {
-		setMenuActive();
+    function replaceContent(url, target) {
+        setMenuActive();
 
-		dataService.getPage(url, function (page) {
+        dataService.getPage(url, function (page) {
 
-			main.style.opacity = 0;
-			toggleHero(page.url);
-			target && target.removeAttribute("data-spinner");
+            main.style.opacity = 0;
+            toggleHero(page.url);
+            target && target.removeAttribute("data-spinner");
 
-			if (burger.offsetLeft > 0 || burger.offsetTop > 0) { // If small screen
-				burger.nextElementSibling.style.visibility = "";
-			}
+            if (burger.offsetLeft > 0 || burger.offsetTop > 0) { // If small screen
+                burger.nextElementSibling.style.visibility = "";
+            }
 
-			setTimeout(function () {
-				main.innerHTML = page.content;
-				document.title = page.title;
-				setFlipAheadLinks(page.next, page.prev);
+            setTimeout(function () {
+                main.innerHTML = page.content;
+                document.title = page.title;
 
-				main.style.opacity = 1;
-				syncMenu();
-			}, 200);
-		});
-	}
+                var index = url.indexOf("#");
+                if (index > 0) {
+                    var target = document.getElementById(url.substring(index + 1))
+                    target.scrollIntoView();
+                }
 
-	function onBurgerClick(e) {
-		e.preventDefault();
-		var ul = e.target.nextElementSibling;
-		var visible = ul.style.visibility;
-		ul.style.visibility = visible === "" ? "visible" : "";
-	}
+                setFlipAheadLinks(page.next, page.prev);
 
-	function setFlipAheadLinks(next, prev) {
-		var nextLink = document.head.querySelector("link[rel=next]");
-		var prevLink = document.head.querySelector("link[rel=prev]");
+                main.style.opacity = 1;
+                syncMenu();
 
-		setLink(nextLink, next, "next");
-		setLink(prevLink, prev, "prev");
+            }, 200);
+        });
+    }
 
-		function setLink(link, href, rel) {
-			if (href) {
-				link = link || createLink(rel, href);
-				link.href = href;
-			}
-			else if (link) {
-				link.parentNode.removeChild(link);
-			}
-		}
+    function onBurgerClick(e) {
+        e.preventDefault();
+        var ul = e.target.nextElementSibling;
+        var visible = ul.style.visibility;
+        ul.style.visibility = visible === "" ? "visible" : "";
+    }
 
-		function createLink(rel, href) {
-			var link = document.createElement("link");
-			link.rel = rel;
-			link.href = href;
-			return document.head.appendChild(link);
-		}
-	}
+    function setFlipAheadLinks(next, prev) {
+        var nextLink = document.head.querySelector("link[rel=next]");
+        var prevLink = document.head.querySelector("link[rel=prev]");
 
-	function toggleHero(href) {
-		var showHero = (!href && location.pathname === "/") || href === "/";
-		hero.className = showHero ? "" : "hide";
-	}
+        setLink(nextLink, next, "next");
+        setLink(prevLink, prev, "prev");
 
-	document.body.addEventListener("click", onBodyClick, false);
+        function setLink(link, href, rel) {
+            if (href) {
+                link = link || createLink(rel, href);
+                link.href = href;
+            }
+            else if (link) {
+                link.parentNode.removeChild(link);
+            }
+        }
 
-	window.addEventListener("popstate", function (e) {
-		if (e.state === "pushed")
-			replaceContent(location.pathname);
-	});
+        function createLink(rel, href) {
+            var link = document.createElement("link");
+            link.rel = rel;
+            link.href = href;
+            return document.head.appendChild(link);
+        }
+    }
+
+    function toggleHero(href) {
+        var showHero = (!href && location.pathname === "/") || href === "/";
+        hero.className = showHero ? "" : "hide";
+    }
+
+    document.body.addEventListener("click", onBodyClick, false);
+
+    window.addEventListener("popstate", function (e) {
+        if (e.state === "pushed")
+            replaceContent(location.pathname);
+    });
 
 })();

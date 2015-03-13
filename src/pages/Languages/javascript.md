@@ -64,6 +64,9 @@ Visual Studio.
 It also supports running in the TeamCity continuous integration 
 client. Chutzpah supports both the QUnit, Jasmine and Mocha testing frameworks
 
+## Node.js
+Fully supported. See [other languages](/languages/other/#node.js)
+
 <aside role="complementary">
 
 ## Related resources
