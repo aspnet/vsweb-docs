@@ -4,86 +4,90 @@
 
 @media only screen and (min-width : (@break + 1)) {
 
-	.container {
-		position: relative;
-	}
-	
-	.download {
-		float: right;
-		display: inline-block !important;
-	}
+    .container {
+        position: relative;
+    }
+
+    .download {
+        float: right;
+        display: inline-block !important;
+    }
 }
 
 @media only screen and (min-width: 1801px) {
-	#hero {
-		background-image: url("/pages/_assets/hero-1920.jpg");
-	}
+    #hero {
+        background-image: url("/pages/_assets/hero-1920.jpg");
+    }
 }
 
 @media only screen and (max-width: 1800px) {
-	#hero {
-		background-image: url("/pages/_assets/hero-1600.jpg");
-	}
+    #hero {
+        background-image: url("/pages/_assets/hero-1600.jpg");
+    }
 }
 
 @media only screen and (max-width: 1440px) {
-	#hero {
-		background-image: url("/pages/_assets/hero-1280.jpg");
-	}
+    #hero {
+        background-image: url("/pages/_assets/hero-1280.jpg");
+    }
 }
 
 @media only screen and (max-width: 1200px) {
-	#hero {
-		background-image: url("/pages/_assets/hero-1024.jpg");
-	}
+    #hero {
+        background-image: url("/pages/_assets/hero-1024.jpg");
+    }
 }
 
 @media only screen and (max-width : @break) {
 
-	header .download {
-		display: none;
-	}
+    header .download {
+        display: none;
+    }
 
-	footer .download{
-		display: inline-block !important;
-	}
+    footer .download {
+        display: inline-block !important;
+    }
 
-	nav {
-		top: @container-padding;
-		right: 0;
+    nav {
+        top: @container-padding;
+        right: 0;
 
-		> ul {
-			visibility: hidden;
-			margin-top: 40px;
-			list-style: none;
-		}
+        > ul {
+            visibility: hidden;
+            list-style: none;
+        }
 
-		#burger {
-			display: inline;
-		}
-	}
+        #burger {
+            display: inline;
+        }
+    }
 
-	main {
-		margin: 0;
-	}
+    main {
+        margin: 0;
+    }
 
-	#hero {
-		background-image: url("/pages/_assets/hero-667.jpg");
+    #hero {
+        background-image: url("/pages/_assets/hero-667.jpg");
 
-		p {
-			margin-right: 0;
-		}
-	}
+        p {
+            margin-right: 0;
+        }
+    }
+
+    #search {
+        margin-top: 40px;
+        visibility: hidden;
+    }
 }
 
 @media print {
-	main {
-		margin: 0;
-	}
+    main {
+        margin: 0;
+    }
 
-	#breadcrumb,
-	header,
-	#contribute {
-		display: none;
-	}
+    #breadcrumb,
+    header,
+    #contribute {
+        display: none;
+    }
 }

@@ -1,107 +1,107 @@
 ﻿@import "variables";
 
 @-ms-viewport {
-	width: device-width;
+    width: device-width;
 }
 
 html, body {
-	height: 100%; // for the sticky footer
+    height: 100%; // for the sticky footer
 }
 
 body {
-	margin: 0;
-	overflow-y: scroll;
-	background: #fff;
-	font: 16px/1.5em "Segoe UI","Segoe WP Light","Segoe WP",Tahoma,Arial,sans-serif;
-	color: @text-color;
+    margin: 0;
+    overflow-y: scroll;
+    background: #fff;
+    font: 16px/1.5em "Segoe UI","Segoe WP Light","Segoe WP",Tahoma,Arial,sans-serif;
+    color: @text-color;
 }
 
 a {
-	-ms-touch-action: manipulation;
-	touch-action: manipulation;
-	color: @link-color;
-	text-decoration: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    color: @link-color;
+    text-decoration: none;
 
-	&:hover {
-		color: @link-hover-color;
-	}
+    &:hover {
+        color: @link-hover-color;
+    }
 }
 
 h1, h2, h3, h4 {
-	font-family: "Segoe UI Light","Segoe WP Light","Segoe UI","Segoe WP",Tahoma,Arial,sans-serif;
-	font-weight: 400;
-	margin: 25px 0;
-	line-height: 1.2;
+    font-family: "Segoe UI Light","Segoe WP Light","Segoe UI","Segoe WP",Tahoma,Arial,sans-serif;
+    font-weight: 400;
+    margin: 25px 0;
+    line-height: 1.2;
 
-	a {
-		color: @text-color;
+    a {
+        color: @text-color;
 
-		&:target {
-			outline: none;
-		}
+        &:target {
+            outline: none;
+        }
 
-		&:hover {
-			color: @text-color;
+        &:hover {
+            color: @text-color;
 
-			&:after {
-				content: "§";
-				padding-left: 10px;
-				color: @link-color;
-				font-weight: bold;
-				font-size: 85%;
-			}
-		}
-	}
+            &:after {
+                content: "§";
+                padding-left: 10px;
+                color: @link-color;
+                font-weight: bold;
+                font-size: 85%;
+            }
+        }
+    }
+    // Don't show the link on the front page
+    &:only-of-type a {
+        cursor: default;
 
-	// Don't show the link on the front page
-	&:only-of-type a {
-		cursor: default;
-
-		&:after {
-			content: "";
-		}
-	}
+        &:after {
+            content: "";
+        }
+    }
 }
 
 h1 {
-	font-size: 36px;
+    font-size: 36px;
 }
 
 h2 {
-	font-size: 30px;
+    font-size: 30px;
 }
 
 h3 {
-	font-size: 22px;
+    font-size: 22px;
 }
 
 img {
-	max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .content {
-	min-height: 100%; // for the sticky footer
+    min-height: 100%; // for the sticky footer
+    position: relative;
 }
 
 li {
-	padding: 1px 0;
+    padding: 1px 0;
 }
 
 .container {
-	max-width: 960px;
-	margin: 0 auto;
-	padding: 0 @container-padding;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 @container-padding;
 }
 
 .download {
-	display: none;
-	font-size: 16px;
-	background: url(/themes/standard/img/arrow.min.svg) no-repeat right center;
-	color: #fff;
-	padding-right: 30px;
+    display: none;
+    font-size: 16px;
+    background: url(/themes/standard/img/arrow.min.svg) no-repeat right center;
+    color: #fff;
+    padding-right: 30px;
 
-	&:hover {
-		color: #fff;
-	}
+    &:hover {
+        color: #fff;
+    }
 }

@@ -3,143 +3,158 @@
 @using System.Configuration;
 
 @functions {
-	public static string Fingerprint(string rootRelativePath)
-	{
-		if (Request.IsLocal)
-		{
-			return rootRelativePath; // So Browser Link's CSS auto-sync works
-		}
+    public static string Fingerprint(string rootRelativePath)
+    {
+        if (Request.IsLocal)
+        {
+            return rootRelativePath; // So Browser Link's CSS auto-sync works
+        }
 
-		string relative = VirtualPathUtility.ToAbsolute("~" + rootRelativePath);
-		string absolute = Server.MapPath(relative);
+        string relative = VirtualPathUtility.ToAbsolute("~" + rootRelativePath);
+        string absolute = Server.MapPath(relative);
 
-		if (!File.Exists(absolute))
-		{
-			throw new Exception("File not found " + rootRelativePath);
-		}
+        if (!File.Exists(absolute))
+        {
+            throw new Exception("File not found " + rootRelativePath);
+        }
 
-		DateTime date = File.GetLastWriteTime(absolute);
-		int index = relative.LastIndexOf('.');
+        DateTime date = File.GetLastWriteTime(absolute);
+        int index = relative.LastIndexOf('.');
 
-		return relative.Insert(index, "_" + date.Ticks);
-	}
+        return relative.Insert(index, "_" + date.Ticks);
+    }
 
-	public static string CreateLink(MarkdownPage page)
-	{
-		List<string> segments = new List<string>(new[] { page.Slug });
-		MarkdownPage parent = page.Parent;
+    public static string CreateLink(MarkdownPage page)
+    {
+        List<string> segments = new List<string>(new[] { page.Slug });
+        MarkdownPage parent = page.Parent;
 
-		while (parent != null)
-		{
-			segments.Add(parent.Slug);
-			parent = parent.Parent;
-		}
+        while (parent != null)
+        {
+            segments.Add(parent.Slug);
+            parent = parent.Parent;
+        }
 
-		string path = string.Join("/", segments.Reverse<string>().Skip(1));
-		return "/" + (string.IsNullOrEmpty(path) ? string.Empty : path + "/");
-	}
+        string path = string.Join("/", segments.Reverse<string>().Skip(1));
+        return "/" + (string.IsNullOrEmpty(path) ? string.Empty : path + "/");
+    }
 
-	public static string GetDimensions(string relative)
-	{
-		string absolute = Server.MapPath(relative);
-		var img = Bitmap.FromFile(absolute);
+    public static IEnumerable<MarkdownPage> GetAllPages(MarkdownPage parent, List<MarkdownPage> list = null)
+    {
+        if (list == null)
+            list = new List<MarkdownPage>();
 
-		return string.Format("width=\"{0}\" height=\"{1}\"", img.Width, img.Height);
-	}
+        list.Add(parent);
 
-	public static bool IsMenuItemOpen(MarkdownPage page)
-	{
-		MarkdownPage current = PageSystem.GetCurrentPage(Request);
+        foreach (MarkdownPage child in parent.Children)
+        {
+            GetAllPages(child, list);
+        }
 
-		if (page == current && page.Children.Any())
-			return true;
+        return list;
+    }
 
-		foreach (MarkdownPage child in page.Children)
-		{
-			if (child == current)
-				return true;
-		}
+    public static string GetDimensions(string relative)
+    {
+        string absolute = Server.MapPath(relative);
+        var img = Bitmap.FromFile(absolute);
 
-		return false;
-	}
+        return string.Format("width=\"{0}\" height=\"{1}\"", img.Width, img.Height);
+    }
+
+    public static bool IsMenuItemOpen(MarkdownPage page)
+    {
+        MarkdownPage current = PageSystem.GetCurrentPage(Request);
+
+        if (page == current && page.Children.Any())
+            return true;
+
+        foreach (MarkdownPage child in page.Children)
+        {
+            if (child == current)
+                return true;
+        }
+
+        return false;
+    }
 }
 
 @helper RenderMenu(IEnumerable<MarkdownPage> pages, bool isOpen = false)
 {
-	<ul>
-		@foreach (MarkdownPage page in pages.Where(p => p.ShowInMenu))
-		{
-			<li class="@(IsMenuItemOpen(page) ? "open" : null)">
-				@CreateAnchorTag(page)
-				@if (page.Children.Count > 0)
-				{
-					@RenderMenu(page.Children, isOpen)
-				}
-			</li>
-		}
-	</ul>
+    <ul>
+        @foreach (MarkdownPage page in pages.Where(p => p.ShowInMenu))
+        {
+            <li class="@(IsMenuItemOpen(page) ? "open" : null)">
+                @CreateAnchorTag(page)
+                @if (page.Children.Count > 0)
+                {
+                    @RenderMenu(page.Children, isOpen)
+                }
+            </li>
+        }
+    </ul>
 }
 
 @helper RenderBreadcrumb(MarkdownPage page)
 {
-	List<MarkdownPage> list = new List<MarkdownPage>(new[] { page });
-	while (page.Parent != null)
-	{
-		list.Add(page.Parent);
-		page = page.Parent;
-	}
+List<MarkdownPage> list = new List<MarkdownPage>(new[] { page });
+while (page.Parent != null)
+{
+    list.Add(page.Parent);
+    page = page.Parent;
+}
 
-	<ul id="breadcrumb">
-		@foreach (MarkdownPage item in list.Reverse<MarkdownPage>())
-		{
-			<li>@CreateAnchorTag(item)</li>
-		}
-	</ul>
+    <ul id="breadcrumb">
+        @foreach (MarkdownPage item in list.Reverse<MarkdownPage>())
+        {
+            <li>@CreateAnchorTag(item)</li>
+        }
+    </ul>
 }
 
 @helper CreateAnchorTag(MarkdownPage page)
 {
-	string link = CreateLink(page);
-	string className = page == PageSystem.GetCurrentPage(Request) ? "active" : null;
+string link = CreateLink(page);
+string className = page == PageSystem.GetCurrentPage(Request) ? "active" : null;
 
-	<a href="@link" class="@className">@page.Title</a>
+    <a href="@link" class="@className">@page.Title</a>
 }
 
 @helper RenderContent(MarkdownPage page)
 {
-	Regex regex = new Regex(@"<img.+(?<attr>src)=""(?<href>[^\""']+)"".*?>");
-	Regex h2rgx = new Regex(@"<(?<start>(h2|h3))>(?<inner>[^<]+)<(?<end>/\1)>");
-	string baseFolder = ConfigurationManager.AppSettings["pageFolder"].Trim('~', '/');
+Regex regex = new Regex(@"<img.+(?<attr>src)=""(?<href>[^\""']+)"".*?>");
+Regex h2rgx = new Regex(@"<(?<start>(h2|h3))>(?<inner>[^<]+)<(?<end>/\1)>");
+string baseFolder = ConfigurationManager.AppSettings["pageFolder"].Trim('~', '/');
 
-	string html = regex.Replace(page.Content, delegate (Match match)
-	{
-		string value = match.Value;
-		string href = match.Groups["href"].Value;
+string html = regex.Replace(page.Content, delegate (Match match)
+{
+    string value = match.Value;
+    string href = match.Groups["href"].Value;
 
-		if (href.StartsWith("_assets"))
-		{
-			string root = page.FileName ?? "";
-			int index = root.LastIndexOf('/') + 1;
-			string relative = "/" + baseFolder + root.Substring(0, index) + href;
-			string newHref = Fingerprint(relative);
-			string dimensions = GetDimensions(relative);
-			string result = value.Replace(" src=\"" + href, " " + dimensions + " src=\"" + newHref);
+    if (href.StartsWith("_assets"))
+    {
+        string root = page.FileName ?? "";
+        int index = root.LastIndexOf('/') + 1;
+        string relative = "/" + baseFolder + root.Substring(0, index) + href;
+        string newHref = Fingerprint(relative);
+        string dimensions = GetDimensions(relative);
+        string result = value.Replace(" src=\"" + href, " " + dimensions + " src=\"" + newHref);
 
-			return result;
-		}
+        return result;
+    }
 
-		return value;
-	});
+    return value;
+});
 
-	html = h2rgx.Replace(html, delegate (Match match)
-	{
-		string value = match.Value;
-		string inner = match.Groups["inner"].Value;
-		string id = inner.Replace(" ", "-").ToLowerInvariant();
-		string result = value.Replace(inner, "<a id=\"" + id + "\" href=\"#" + id + "\">" + inner + "</a>");
+html = h2rgx.Replace(html, delegate (Match match)
+{
+    string value = match.Value;
+    string inner = match.Groups["inner"].Value;
+    string id = inner.Replace(" ", "-").ToLowerInvariant();
+    string result = value.Replace(inner, "<a id=\"" + id + "\" href=\"#" + id + "\">" + inner + "</a>");
 
-		return result;
-	});
+    return result;
+});
 
-	@Html.Raw(html)
+    @Html.Raw(html)
 }

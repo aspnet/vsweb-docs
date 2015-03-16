@@ -1,0 +1,53 @@
+﻿@using System.Configuration;
+@{
+    string q = Request.QueryString["q"];
+    Page.Title = "Search results for " + q;
+    Page.Description = "Search results for " + q;
+    Page.ShowHero = false;
+
+    Page.Theme = ConfigurationManager.AppSettings["theme"];
+
+    Layout = "~/themes/" + Page.Theme + "/_layout.cshtml";
+}
+
+@functions
+{
+    public IEnumerable<MarkdownPage> GetResults()
+    {
+        string q = Request.QueryString["q"];
+
+        var list = new Dictionary<MarkdownPage, int>();
+        foreach (MarkdownPage page in Helpers.GetAllPages(PageSystem.IndexPage))
+        {
+            int value = 0;
+
+            if (page.Title.Contains(q))
+                value += 20;
+
+            if (page.Description.Contains(q))
+                value += 10;
+
+            if (page.Keywords.Contains(q))
+                value += 5;
+
+            if (page.Content.Contains(q))
+                value += 3;
+
+            if (value > 0)
+                list.Add(page, value);
+        }
+
+        return list.OrderByDescending(k => k.Value).Select(k => k.Key);
+    }
+}
+
+<div id="searchresults">
+    <h2>Search results for '@q'</h2>
+    @foreach (MarkdownPage page in GetResults().Where(p => p.Parent != null))
+    {
+        <article>
+            <a href="@Helpers.CreateLink(page)">@(page.Parent != PageSystem.IndexPage ? page.Parent.Title + " » " : "") @page.Title</a>
+            <p>@page.Description</p>
+        </article>
+    }
+</div>

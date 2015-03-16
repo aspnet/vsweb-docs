@@ -53,7 +53,7 @@
         if (e.target.id === burger.id) {
             onBurgerClick(e);
         }
-        else if (e.target.nextElementSibling) {
+        else if (e.target.nextElementSibling && e.target.nextElementSibling.tagName === "UL") {
             expandMenuParent(e);
         }
         else if (href.indexOf("://") === -1) {
@@ -109,6 +109,7 @@
 
             if (burger.offsetLeft > 0 || burger.offsetTop > 0) { // If small screen
                 burger.nextElementSibling.style.visibility = "";
+                burger.nextElementSibling.nextElementSibling.style.visibility = "";
             }
 
             setTimeout(function () {
@@ -136,9 +137,12 @@
 
     function onBurgerClick(e) {
         e.preventDefault();
-        var ul = e.target.nextElementSibling;
+        var ul = e.target.nextElementSibling.nextElementSibling;
         var visible = ul.style.visibility;
         ul.style.visibility = visible === "" ? "visible" : "";
+
+        var form = e.target.nextElementSibling;
+        form.style.visibility = ul.style.visibility;
     }
 
     function setFlipAheadLinks(next, prev) {

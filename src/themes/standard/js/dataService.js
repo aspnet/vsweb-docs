@@ -25,8 +25,30 @@
 		xhr.send();
 	}
 
+    function sendXhr(url, callback) {
+
+        if (sessionStorage && sessionStorage[url]) {
+            callback(sessionStorage[url]);
+            return;
+        }
+
+        var http = new XMLHttpRequest();
+        http.open("GET", url, true);
+        http.onreadystatechange = function () {
+            if (http.readyState === 4 && http.status === 200) {
+                callback(http.responseText);
+
+                if (http.status === 200 && sessionStorage)
+                    sessionStorage[url] = http.responseText;
+            }
+        }
+
+        http.send(null);
+    }
+
 	return {
-		getPage: getPage,
+	    getPage: getPage,
+        sendXhr: sendXhr,
 	}
 
 })();

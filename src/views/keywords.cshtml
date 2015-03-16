@@ -1,0 +1,27 @@
+﻿@{
+    Response.ContentType = "appliation/json";
+    string json = "[" + string.Join(",", GetKeywords(PageSystem.IndexPage).Select(k => "\"" + k + "\"")) + "]";
+    Response.Write(json);
+}
+
+@functions {
+
+    public static IEnumerable<string> GetKeywords(MarkdownPage parent)
+    {
+        var list = new List<string>();
+        var pages = Helpers.GetAllPages(parent);
+
+        foreach (MarkdownPage page in pages)
+        {
+            var keywords = page.Keywords.Split(',').Select(k => k.Trim());
+
+            foreach (string keyword in keywords)
+            {
+                if (!list.Contains(keyword))
+                    list.Add(keyword);
+            }
+        }
+
+        return list.OrderBy(k => k);
+    }
+}
