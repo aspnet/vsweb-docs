@@ -20,6 +20,9 @@
 
         if (!hiddenLink) {
             hiddenLink = document.createElement("a");
+            hiddenLink.setAttribute("aria-hidden", "true");
+            hiddenLink.innerHTML = "Hidden link used by the site search";
+            hiddenLink.style.display = "none";
             searchButton.parentNode.appendChild(hiddenLink);
         }
 

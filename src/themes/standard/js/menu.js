@@ -15,6 +15,7 @@
         for (var i = 0; i < open.length; i++) {
             // this is for popstate to adjust the menu
             open[i].removeAttribute("class");
+            //open[i].setAttribute("aria-hidden", "true");
         }
 
         if (location.pathname === "/")
@@ -33,6 +34,7 @@
 
             if (li.tagName === "LI" && li.childElementCount === 2) {
                 li.className = "open";
+                li.removeAttribute("aria-hidden");
             }
 
             li = li.parentNode;

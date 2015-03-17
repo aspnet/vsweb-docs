@@ -79,7 +79,7 @@
     }
 }
 
-@helper RenderMenu(IEnumerable<MarkdownPage> pages, bool isOpen = false)
+@helper RenderMenu(IEnumerable<MarkdownPage> pages)
 {
     <ul>
         @foreach (MarkdownPage page in pages.Where(p => p.ShowInMenu))
@@ -88,7 +88,7 @@
                 @CreateAnchorTag(page)
                 @if (page.Children.Count > 0)
                 {
-                    @RenderMenu(page.Children, isOpen)
+                    @RenderMenu(page.Children)
                 }
             </li>
         }

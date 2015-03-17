@@ -36,6 +36,7 @@ nav {
 			transition: max-height .2s ease-in-out;
 
 			li {
+                display: none;
 				font-size: 90%;
 
 				&:last-child {
@@ -58,11 +59,15 @@ nav {
 
 	.open {
 		background-color: @menu-background-open-color;
-		border-left: 4px solid @link-color;
+		border-left: 4px solid @link-hover-color;
 		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAG1BMVEVMaXH29vb29vb29vZCQkL29vazs7PJycnU1NRCTyjsAAAABHRSTlMAQJ8QKGdt6wAAADJJREFUCNdjYMAOmGAMVZhAKpSh5go	VSIEy1FxcoQJQhpoLhMEUUV5eCmIYCgIBA1EAAKzvBmjcnChlAAAAAElFTkSuQmCC') /*/themes/standard/img/nav-open.png*/;
 
 		> ul {
 			max-height: 200px;
+
+            li {
+                display: block;
+            }
 		}
 	}
 
