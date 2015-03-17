@@ -3,7 +3,7 @@
 	description="ASP.NET is a free, open source web framework for building great Web sites and Web applications using HTML, CSS and JavaScript."
 	slug="aspnet"
     order="100"
-	keywords="asp, aspnet, asp.net, roslyn, server-side, mvc, webforms, web forms, webpages, web pages"
+	keywords="c#, asp.net, roslyn, server-side, mvc, webforms, web forms, webpages, web pages"
 />
 
 ## Open source

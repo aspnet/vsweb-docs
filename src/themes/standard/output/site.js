@@ -288,26 +288,28 @@ var dataService = (function () {
 
     var searchField = document.getElementById("q"),
         searchButton = document.getElementById("searchbutton"),
+        searchForm = document.getElementById("search"),
         datalist = document.getElementsByTagName("datalist")[0],
         hiddenLink;
 
     function search(e) {
 
         var q = searchField.value;
+        e.preventDefault();
 
         if (q.trim().length === 0) {
-            e.preventDefault();
             searchField.focus();
+            return;
         }
 
         if (!hiddenLink) {
-            // This will let menu.js handle the page load as if it was a link click.
-            e.preventDefault();
             hiddenLink = document.createElement("a");
-            hiddenLink.href = "/search/" + encodeURIComponent(q);
             searchButton.parentNode.appendChild(hiddenLink);
-            hiddenLink.click();
         }
+
+        // This will let menu.js handle the page load as if it was a link click.
+        hiddenLink.href = "/search/" + encodeURIComponent(q);
+        hiddenLink.click();
     }
 
     function clear() {
@@ -338,7 +340,7 @@ var dataService = (function () {
         });
     }
 
-    searchButton.addEventListener("click", search, false);
+    searchForm.addEventListener("submit", search, false);
     searchField.addEventListener("focus", onFocus, false);
     window.addEventListener("load", clear, false);
 })();
