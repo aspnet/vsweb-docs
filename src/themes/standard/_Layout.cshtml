@@ -11,7 +11,6 @@
     <meta name="keywords" content="@Page.Keywords" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="@Helpers.Fingerprint("/themes/" + Page.Theme + "/output/site.css")" rel="stylesheet" />
-    <link rel="prefetch" href="@Helpers.Fingerprint("/themes/" + Page.Theme + "/output/site.js")" />
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@("@visualstudio")" />
@@ -90,7 +89,7 @@
                 <form id="search" role="search" method="get" action="/search/">
                     <label for="q">Search</label>
                     <input type="image" alt="Search" src="/themes/standard/img/search.min.svg" id="searchbutton" />
-                    <input type="search" id="q" name="q" results="5" placeholder="Search" autocomplete="off" list="keywords" />
+                    <input type="search" id="q" name="q" placeholder="Search" autocomplete="off" list="keywords" />
                     <datalist id="keywords"></datalist>
                 </form>
                 @Helpers.RenderMenu(PageSystem.IndexPage.Children)
