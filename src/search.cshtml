@@ -1,20 +1,25 @@
 ﻿@using System.Configuration;
 @{
-    string q = Request.QueryString["q"];
+    string q = (Request.QueryString["q"] ?? string.Empty).Trim(',');
     Page.Title = "Search results for " + q;
     Page.Description = "Search results for " + q;
     Page.ShowHero = false;
 
     Page.Theme = ConfigurationManager.AppSettings["theme"];
 
-    Layout = "~/themes/" + Page.Theme + "/_layout.cshtml";
+    if (Request.Headers["X-Content-Only"] != "1")
+    {
+        Layout = "~/themes/" + Page.Theme + "/_layout.cshtml";
+    }
+
+    var results = GetResults();
 }
 
 @functions
 {
     public IEnumerable<MarkdownPage> GetResults()
     {
-        string q = Request.QueryString["q"];
+        string q = (Request.QueryString["q"] ?? string.Empty).Trim(',');
 
         var list = new Dictionary<MarkdownPage, int>();
         foreach (MarkdownPage page in Helpers.GetAllPages(PageSystem.IndexPage))
@@ -41,13 +46,25 @@
     }
 }
 
+<ul id="breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><a href="/search/@q">Search/@q</a></li>
+</ul>
+
+
 <div id="searchresults">
     <h2>Search results for '@q'</h2>
-    @foreach (MarkdownPage page in GetResults().Where(p => p.Parent != null))
+    @foreach (MarkdownPage page in results)
     {
+        string prefix = page.Parent != null && page.Parent != PageSystem.IndexPage ? page.Parent.Title + " » " : null;
         <article>
-            <a href="@Helpers.CreateLink(page)">@(page.Parent != PageSystem.IndexPage ? page.Parent.Title + " » " : "") @page.Title</a>
+            <a href="@Helpers.CreateLink(page)">@prefix @page.Title</a>
             <p>@page.Description</p>
         </article>
+    }
+
+    @if (!results.Any())
+    {
+        <p>No results found for '@q'</p>
     }
 </div>

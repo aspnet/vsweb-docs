@@ -7,15 +7,14 @@
     background: @menu-background-color;
 
     input[type=search] {
-        padding: 5px 6px;
+        padding: 6px 6px;
         background: transparent;
         font: inherit;
         width: @menu-width - 40px;
-        float: right;
-        margin-left: 25px;
+        float: left;
+        padding-left: 35px;
         outline: none;
         border: none;
-        -webkit-appearance: textfield;
     }
 
     input[type=submit] {
@@ -30,12 +29,8 @@
     }
 }
 
-#searchresults {
-    margin-top: @container-padding;
-
-    a {
-        font-size: 1.3em;
-    }
+#searchresults a {
+    font-size: 1.3em;
 }
 
 input[type="search"]::-webkit-search-decoration,

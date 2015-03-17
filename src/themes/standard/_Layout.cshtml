@@ -89,7 +89,7 @@
 
                 <form id="search" role="search" method="get" action="/search/">
                     <input type="submit" value=" " id="searchbutton" />
-                    <input type="search" id="q" name="q" results="5" placeholder="Search" autocomplete="off" list="keywords" value="@Request.QueryString["q"]" />
+                    <input type="search" id="q" name="q" results="5" placeholder="Search" autocomplete="off" list="keywords" />
                     <datalist id="keywords"></datalist>
                 </form>
                 @Helpers.RenderMenu(PageSystem.IndexPage.Children)

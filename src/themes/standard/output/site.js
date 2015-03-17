@@ -81,6 +81,8 @@ var dataService = (function () {
 
         var li = active[0].parentNode;
 
+        if (!li) return;
+
         do {
 
             if (li.tagName === "LI" && li.childElementCount === 2) {
@@ -89,7 +91,7 @@ var dataService = (function () {
 
             li = li.parentNode;
 
-        } while (li.parentNode !== nav);
+        } while (li && li.parentNode !== nav);
     }
 
     function onBodyClick(e) {
@@ -255,6 +257,8 @@ var dataService = (function () {
     window.addEventListener("popstate", function (e) {
         if (e.state === "pushed")
             replaceContent(location.pathname);
+        else
+            console.log(e);
     });
 
     window.addEventListener("scroll", fadeImagesIntoView, false);
@@ -284,7 +288,8 @@ var dataService = (function () {
 
     var searchField = document.getElementById("q"),
         searchButton = document.getElementById("searchbutton"),
-        datalist = document.getElementsByTagName("datalist")[0];
+        datalist = document.getElementsByTagName("datalist")[0],
+        hiddenLink;
 
     function search(e) {
 
@@ -293,6 +298,15 @@ var dataService = (function () {
         if (q.trim().length === 0) {
             e.preventDefault();
             searchField.focus();
+        }
+
+        if (!hiddenLink) {
+            // This will let menu.js handle the page load as if it was a link click.
+            e.preventDefault();
+            hiddenLink = document.createElement("a");
+            hiddenLink.href = "/search/" + encodeURIComponent(q);
+            searchButton.parentNode.appendChild(hiddenLink);
+            hiddenLink.click();
         }
     }
 
@@ -307,18 +321,14 @@ var dataService = (function () {
         }, 1000)
     }
 
-    function typing(e) {
-
-        if (e.target.value.length === 0) {
-            datalist.innerHTML = "";
-            return;
-        }
+    function onFocus(e) {
 
         if (datalist.childNodes.length > 0)
             return;
 
         dataService.sendXhr("/views/keywords.cshtml", function (data) {
             var keywords = JSON.parse(data);
+
             for (var i = 0; i < keywords.length; i++) {
                 var keyword = keywords[i];
                 var option = document.createElement("option");
@@ -328,12 +338,7 @@ var dataService = (function () {
         });
     }
 
-    function onFocus(e) {
-        datalist.innerHTML = "";
-    }
-
     searchButton.addEventListener("click", search, false);
     searchField.addEventListener("focus", onFocus, false);
-    searchField.addEventListener("keyup", typing, false);
     window.addEventListener("load", clear, false);
 })();

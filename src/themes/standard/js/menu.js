@@ -27,6 +27,8 @@
 
         var li = active[0].parentNode;
 
+        if (!li) return;
+
         do {
 
             if (li.tagName === "LI" && li.childElementCount === 2) {
@@ -35,7 +37,7 @@
 
             li = li.parentNode;
 
-        } while (li.parentNode !== nav);
+        } while (li && li.parentNode !== nav);
     }
 
     function onBodyClick(e) {
@@ -201,6 +203,8 @@
     window.addEventListener("popstate", function (e) {
         if (e.state === "pushed")
             replaceContent(location.pathname);
+        else
+            console.log(e);
     });
 
     window.addEventListener("scroll", fadeImagesIntoView, false);
