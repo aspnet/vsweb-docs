@@ -27,7 +27,7 @@ as well as HTML properties and template bindings.
 ![Angular Intellisense](_assets/frameworks-angular.gif)
 
 ## React.js
-Full JavaScript editing support with dynamic Intellisenes as well as
+Full JavaScript editing support with dynamic Intellisense as well as
 a brand new editor for JSX syntax.
 
 ![React JSX editor](_assets/frameworks-react.png)
