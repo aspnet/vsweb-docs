@@ -23,7 +23,7 @@ web framework.
 - [Python Tools on Codeplex](http://pytools.codeplex.com/)
 
 ## Express (Node.js)
-NTVS is a free, open source plugin that turns Visual Studio into a Node.js IDE. 
+Node.js Tools for Visual Studio (NTVS) is a free, open source plugin that turns Visual Studio into a Node.js IDE. 
 
 NTVS supports Editing, Intellisense, Profiling, npm, TypeScript, Debugging locally 
 and remotely (Windows/MacOS/Linux), as well Azure Web Sites and Cloud Service.
