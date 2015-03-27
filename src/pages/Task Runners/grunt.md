@@ -14,7 +14,7 @@ configuration of the variuos different Grunt tasks.
 Using the [Web Essentials](http://vswebessentials.com) extension
 you also get completion for loading npm tasks.
 
-![Grunt load npm tasks](_assets/grunt-loadnpmtasks.gif)
+![Grunt load npm tasks](_assets/grunt-loadnpmtasks.png)
 
 ## Snippets
 Create a new gruntfile.js very easily using the built-in snippet provided

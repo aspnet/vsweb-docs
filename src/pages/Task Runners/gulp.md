@@ -17,7 +17,7 @@ used in your gulpfile.js.
 Using the [Web Essentials](http://vswebessentials.com) extension
 you also get completion for loading node modules.
 
-![Gulp require](_assets/gulp-require.gif)
+![Gulp require](_assets/gulp-require.png)
 
 ## Task Runner Explorer
 Use Visual Studio's Task Runner Explorer window to interact with Gulp.
