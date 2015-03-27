@@ -55,13 +55,8 @@ nav {
             padding: 5px 0 5px 0;
             background-color: @menu-background-color;
 
-            &:before {
-                /* Do this instead of background image to make SVG stabile in IE */
-                content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnR7b3BhY2l0eTowO2ZpbGw6I0Y2RjZGNjt9IC5pY29uLXZzLW91dHtmaWxsOiNGNkY2RjY7fSAuaWNvbi12cy1iZ3tmaWxsOiM0MjQyNDI7fTwvc3R5bGU+PHBhdGggaWQ9ImNhbnZhcyIgZD0iTTE2IDE2SDBWMGgxNnYxNnoiIGNsYXNzPSJpY29uLWNhbnZhcy10cmFuc3BhcmVudCIvPjxwYXRoIGlkPSJvdXRsaW5lIiBkPSJNNSAxLjZMMTEuNCA4IDUgMTQuNFYxLjZ6IiBjbGFzcz0iaWNvbi12cy1vdXQiLz48cGF0aCBpZD0iaWNvbkJnIiBkPSJNNiA0djhsNC00LTQtNHptMSAyLjRMOC42IDggNyA5LjZWNi40eiIgY2xhc3M9Imljb24tdnMtYmciLz48L3N2Zz4=') /*/themes/standard/img/nav-closed.min.svg*/;
-                float: left;
-                position: relative;
-                top: 5px;
-                left: 6px;
+            > a {
+                background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnR7b3BhY2l0eTowO2ZpbGw6I0Y2RjZGNjt9IC5pY29uLXZzLW91dHtmaWxsOiNGNkY2RjY7fSAuaWNvbi12cy1iZ3tmaWxsOiM0MjQyNDI7fTwvc3R5bGU+PHBhdGggaWQ9ImNhbnZhcyIgZD0iTTE2IDE2SDBWMGgxNnYxNnoiIGNsYXNzPSJpY29uLWNhbnZhcy10cmFuc3BhcmVudCIvPjxwYXRoIGlkPSJvdXRsaW5lIiBkPSJNNSAxLjZMMTEuNCA4IDUgMTQuNFYxLjZ6IiBjbGFzcz0iaWNvbi12cy1vdXQiLz48cGF0aCBpZD0iaWNvbkJnIiBkPSJNNiA0djhsNC00LTQtNHptMSAyLjRMOC42IDggNyA5LjZWNi40eiIgY2xhc3M9Imljb24tdnMtYmciLz48L3N2Zz4=') /*/themes/standard/img/nav-closed.min.svg*/ no-repeat 5px 6px;
             }
         }
     }
@@ -70,8 +65,8 @@ nav {
         background-color: @menu-background-open-color;
         border-left: 4px solid @link-hover-color;
 
-        &:before {
-            content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnR7b3BhY2l0eTowO2ZpbGw6I0Y2RjZGNjt9IC5pY29uLXZzLW91dHtmaWxsOiNGNkY2RjY7fSAuaWNvbi12cy1iZ3tmaWxsOiM0MjQyNDI7fTwvc3R5bGU+PHBhdGggaWQ9ImNhbnZhcyIgZD0iTTE2IDE2SDBWMGgxNnYxNnoiIGNsYXNzPSJpY29uLWNhbnZhcy10cmFuc3BhcmVudCIvPjxwYXRoIGlkPSJvdXRsaW5lIiBkPSJNMi45IDExTDEyIDIuMDJWMTFIMi45eiIgY2xhc3M9Imljb24tdnMtb3V0Ii8+PHBhdGggaWQ9Imljb25CZyIgZD0iTTExIDEwSDUuMzRMMTEgNC40VjEweiIgY2xhc3M9Imljb24tdnMtYmciLz48L3N2Zz4=') /*/themes/standard/img/nav-open.min.svg*/;
+        > a {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnR7b3BhY2l0eTowO2ZpbGw6I0Y2RjZGNjt9IC5pY29uLXZzLW91dHtmaWxsOiNGNkY2RjY7fSAuaWNvbi12cy1iZ3tmaWxsOiM0MjQyNDI7fTwvc3R5bGU+PHBhdGggaWQ9ImNhbnZhcyIgZD0iTTE2IDE2SDBWMGgxNnYxNnoiIGNsYXNzPSJpY29uLWNhbnZhcy10cmFuc3BhcmVudCIvPjxwYXRoIGlkPSJvdXRsaW5lIiBkPSJNMi45IDExTDEyIDIuMDJWMTFIMi45eiIgY2xhc3M9Imljb24tdnMtb3V0Ii8+PHBhdGggaWQ9Imljb25CZyIgZD0iTTExIDEwSDUuMzRMMTEgNC40VjEweiIgY2xhc3M9Imljb24tdnMtYmciLz48L3N2Zz4=') /*/themes/standard/img/nav-open.min.svg*/;
         }
 
         > ul {
