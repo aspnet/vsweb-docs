@@ -1,9 +1,9 @@
 ﻿<properties
 	       pageTitle="Projects"
-	       description="Visual Studio creates a bi-directional web socket channel to any browser or emulator. That socket is called BrowserLink."
+	       description="Projects in Visual Studio 2015 are folder based and don't require the csproj file anymore"
 	       slug="projects"
-           order="100"
-	       keywords="browserlink, web socket, browsersync"
+	       order="100"
+	       keywords="projects, folders, profiles"
 />
 
 ## Folder based web projects
