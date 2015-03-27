@@ -10,7 +10,7 @@ Website: [vsweb.azurewebsites.net/](http://vsweb.azurewebsites.net/)
 
 - Uses CommonMark for rendering Markdown
 - Uses the folder structure to create the menu
-- Convension based file/folder structure
+- Convention based file/folder structure
 - Each page has a link to `Edit this page on GitHub`
 - Everything is configurable from `web.config`
 - Semantic URLs
@@ -41,7 +41,7 @@ Website: [vsweb.azurewebsites.net/](http://vsweb.azurewebsites.net/)
 
 ### Getting started
 
-The website itself is really simple. It only consist of a single
+The website itself is really simple. It consists of a single
 `index.cshtml` file. The entire site is built up around Markdown (`.md`) files
 located inside the `pages` directory by default.
 
