@@ -79,6 +79,7 @@ HTML data binding expressions.
 - [Glyphfriends](https://visualstudiogallery.msdn.microsoft.com/5fd24afb-b3b2-4cec-9b03-1cfcec6123aa)
 - [Bootstrap Snippet Pack](https://visualstudiogallery.msdn.microsoft.com/e82e7862-f731-4183-a27a-3a44b261bfe5)
 - [Apache Cordova for Visual Studio 2013](http://www.microsoft.com/en-us/download/details.aspx?id=42675)
+- [React Snippet Pack](https://visualstudiogallery.msdn.microsoft.com/234d79e9-f0fd-41e1-a926-850da8e8c7d7)
 </section>
 
 </aside>

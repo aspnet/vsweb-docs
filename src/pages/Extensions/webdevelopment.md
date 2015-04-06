@@ -109,6 +109,13 @@ Works with long paths. Requires Node.js installed on the machine.
 - [Download Flatten Packages](https://visualstudiogallery.msdn.microsoft.com/cd0b1938-4513-4e57-b9b7-c674b4a20e79)
 - [Flatten Packages on GitHub](https://github.com/madskristensen/FlattenPackages/)
 
+## React Snippet Pack
+A snippet pack to make you more productive working with
+React.js. Based on the snippets from the Atom React Plugin.
+
+- [Download React Snippet Pack](https://visualstudiogallery.msdn.microsoft.com/234d79e9-f0fd-41e1-a926-850da8e8c7d7)
+- [React Snippet Pack on GitHub](https://github.com/madskristensen/ReactSnippetPack/)
+
 <aside role="complementary">
 
 ## Related resources
