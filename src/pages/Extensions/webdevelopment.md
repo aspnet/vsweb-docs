@@ -100,6 +100,15 @@ within Visual Studio.
 - [Download Open from Azure Websites](https://visualstudiogallery.msdn.microsoft.com/60d414b1-4ead-4fde-9359-588aa126cd6c)
 - [Open from Azure Websites on GitHub](https://github.com/ligershark/OpenFromPortal/)
 
+## Flatten Packages
+Flattens the node_modules folder hierarchy by using the
+"flatten-packages" npm package behind the scenes.
+
+Works with long paths. Requires Node.js installed on the machine.
+
+- [Download Flatten Packages](https://visualstudiogallery.msdn.microsoft.com/cd0b1938-4513-4e57-b9b7-c674b4a20e79)
+- [Flatten Packages on GitHub](https://github.com/madskristensen/FlattenPackages/)
+
 <aside role="complementary">
 
 ## Related resources
