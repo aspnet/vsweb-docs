@@ -1,4 +1,4 @@
-﻿<properties
+<properties
 			pageTitle="JavaScript"
 			description="The new JavaScript editor in Visual Studio supports EcmaScript 6 and has the most advanced Intellisense engine on the market."
 			slug="javascript"
@@ -7,65 +7,52 @@
 />
 
 ## Basic auto-completion
-The JavaScript Intellisense engine is powered by Internet Explorer's JavaScript
-execution engine, Chakra. 
+The JavaScript [IntelliSense](https://msdn.microsoft.com/library/hcw1s69b.aspx) engine is powered by Internet Explorer's JavaScript execution engine, Chakra. 
 
-That means that all your JavaScript code is executed in the background to 
-provide the ultimate Intellisense experience.
+That means that all your JavaScript code is executed in the background to provide the ultimate IntelliSense experience.
 
 ![JavaScript basic auto completion](_assets/javascript-basic-auto-completion.gif)
 
 ## EcmaScript 6 support
-Visual Studio supports a broad set of EcmaScript 6 features including classes,
-let, const, fat arrows and template strings.
+Visual Studio supports a broad set of EcmaScript 6 features including classes, let, const, fat arrows and template strings.
 
 ![EcmaScript 6 support](_assets/javascript-es6.png)
 
 ## Object literal Intellisense
-The Chakra execution engine is capable of reverse engineering function
-parameters to provide object literal Intellisense.
+The Chakra execution engine is capable of reverse engineering function parameters to provide object literal Intellisense.
 
 ![Object literal Intellisense](_assets/javascript-object-literal-intellisense.gif)
 
 ## Snippets
-Snippets provides a shortcut for common, but perhaps more complex structures,
-which is a huge productivity boost.
+Snippets provide a shortcut for inserting common structures.
 
 ![JavaScript snippets](_assets/javascript-snippets.gif)
 
 ## Go to definition
-Ever needed to find the definition of a variable or function? By pressing `F12`
-you can easily jump to the definition of any identifier - even across files.
+Ever needed to find the definition of a variable or function? By pressing `F12` you can easily jump to the definition of any identifier - even across files.
 
 ## JSDoc support
-The Intellisense engine supports JSDoc v3 as well as the older XMLDoc 
-comment syntax.
+The IntelliSense engine supports JSDoc v3 as well as the older XMLDoc comment syntax.
 
 ![JavaScript JSDoc support](_assets/javascript-jsdoc.gif)
 
 ## Debugging
-Set breakpoints, watch locals and everything else you would expect
-from a first-class debugging experience.
+Set breakpoints, watch locals, and do everything else you would expect from a first-class debugging experience.
 
 ![JavaScript debugging](_assets/javascript-debugging.gif)
 
 ## Navigation bar
-Easily get an overview of the functions and scopes in any JavaScript file
-by using the navigation bar at the top of the editor.
+Easily get an overview of the functions and scopes in any JavaScript file by using the navigation bar at the top of the editor.
 
 ![JavaScript navigation bar](_assets/javascript-navigation-bar.gif)
 
 ## Unit testing
-Chutzpah (hutz·pah) is an open source JavaScript unit test runner which 
-helps you integrate JavaScript unit testing into your website. It enables 
-you to run JavaScript unit tests from the command line and from inside of 
-Visual Studio. 
+Chutzpah (hutz·pah) is an open source JavaScript unit test runner which helps you integrate JavaScript unit testing into your website. It enables you to run JavaScript unit tests from the command line and from inside of Visual Studio. 
 
-It also supports running in the TeamCity continuous integration 
-client. Chutzpah supports both the QUnit, Jasmine and Mocha testing frameworks
+Chutzpah also supports running in the TeamCity continuous integration client, and it supports the QUnit, Jasmine, and Mocha testing frameworks.
 
 ## Node.js
-Fully supported. See [other languages](/languages/other/#node.js)
+Node.js is fully supported. See [other languages](/languages/other/#node.js)
 
 <aside role="complementary">
 
