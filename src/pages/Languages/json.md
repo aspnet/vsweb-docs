@@ -1,52 +1,37 @@
-﻿<properties
+<properties
 			pageTitle="JSON"
 			description="The brand new JSON editor in Visual Studio is the first of its kind to fully support JSON Schema."
 			slug="json"
 			keywords="json, jsonp, javascript object notation"
 />
 
-## Basic auto-completion
-Writing JSON documents has never been easier and more fluent than
-with the Visual Studio JSON editor.
+## Auto-completion
+Writing JSON documents has never been easier than with the Visual Studio JSON editor.
 
-You can even type the colon inside the property name to save a few
-keystrokes.
+You can even type the colon before the closing quote of a property name to save a few keystrokes.
 
 ![Basic JSON auto-completion](_assets/json-basic-auto-completion.gif)
 
-## JSON Schema draft v4
-The JSON editor in Visual Studio is the first of its kind to fully
-support the [JSON Schema](http://json-schema.org) standard.
+## JSON Schema
+The JSON editor in Visual Studio is the first of its kind to fully support the [JSON Schema](http://json-schema.org) standard. This results in IntelliSense and validation for some of the most common JSON file formats.
 
-This results in Intellisense and validator for some of the most common
-JSON file formats. 
-
-## Schema based Intellisense
-By leveraging JSON Schema it is now easier than ever to work with JSON
-documents.
-
-This example shows how it's like working with a 
+This example shows what it's like working with a 
 [Web Manifest](http://www.w3.org/TR/appmanifest/) JSON document.
 
 ![JSON Schema based Intellisense](_assets/json-schema-intellisense.gif)
 
 ## Tooltips
-Information from the referenced JSON Schema is displayed as hover tooltips
-to help make it clear what the various properties mean.
+Information from the referenced JSON Schema is displayed as hover tooltips to help make it clear what the various properties mean.
 
 ![JSON tootips](_assets/json-tooltips.gif)
 
 ## Comments
-Most modern JSON parsers supports comments and so does Visual Studio.
-
-Simply hit the global keyboard shortcut `Ctrl+K+C` to add a comment
-or `Ctrl+K+U` to uncomment the line or selection.
+Most modern JSON parsers support comments, and so does Visual Studio. Simply hit the global keyboard shortcut `Ctrl+K+C` to add a comment, or `Ctrl+K+U` to uncomment the line or selection.
 
 ![JSON comments](_assets/json-comments.gif)
 
 ## Validation
-The editor helps you keep track of both syntax errors as well as
-other potential issues, such as duplicate properties.
+The editor helps you keep track of syntax errors and other potential issues, such as duplicate properties.
 
 ![JSON validation](_assets/json-validation.gif)
 
@@ -54,27 +39,21 @@ other potential issues, such as duplicate properties.
 You get great support for writing JSON Schema documents.
 
 ### JSON Pointers
-Visual Studio provides full Intellisense for
-[JSON Pointer](http://tools.ietf.org/html/rfc6901) references.
-
-It works both for pointers in the current document as well as remote
-references.
+Visual Studio provides full IntelliSense for [JSON Pointer](http://tools.ietf.org/html/rfc6901) references. It works for pointers in the current document as well as remote references.
 
 ![JSON Pointers](_assets/json-pointer.gif)
 
 ### Inline $ref references
-Get help refactoring your JSON Schema by easily inlining any
-`$ref` references.
+Inline `$ref` references make it easy to refactor your JSON Schema.
 
 ![JSON inline references](_assets/json-inline-reference.gif)
 
 ### Go to definition
 You can hit `F12` on any `$ref` or `$schema` property to navigate
-to its source origin - in both local and remote file.
+to its source origin - in both local and remote files.
 
 ### Open source
-All the JSON Schema files that provide Intellisense and validation is open
-source at [SchemaStore.org](http://schemastore.org)
+All the JSON Schema files that provide IntelliSense and validation are open source at [SchemaStore.org](http://schemastore.org).
 
 <aside role="complementary">
 
