@@ -1,4 +1,4 @@
-﻿<properties
+<properties
 	pageTitle="Bower"
 	description="The best-in-class Bower support makes it easier than ever to use Bower components in your projects."
 	slug="bower"
@@ -6,31 +6,25 @@
 />
 
 ## bower.json Intellisense
-Get full Intellisense for everything in bower.json including live
-search results from the online Bower registry.
+Get full [IntelliSense](http://go.microsoft.com/fwlink/?LinkId=532997) for everything in bower.json, including live search results from the online Bower registry.
 
 ![Bower package Intellisense](_assets/bower-intellisense.gif)
 
 ## Install on save
-As soon as you save any changes to the `bower.json` file, Visual Studio
-will automatically call `bower install` to install or restore all packages.
+As soon as you save any changes to the `bower.json` file, Visual Studio automatically calls `bower install` to install or restore all packages.
 
 ## IDE integration
-The Solution Explorer integrates with Bower to show a logical treeview
-structure of the package dependencies.
+The Solution Explorer integrates with Bower to show a logical tree-view structure of the package dependencies.
 
 ![Bower IDE integration](_assets/bower-ide-integration.gif)
 
 ## Light bulbs
-Perform common tasks on individual packages using the light bulbs that
-automatically appears next to each package.
+Perform common tasks on individual packages using the light bulbs that automatically appear next to each package.
 
 ![Bower light bulbs](_assets/bower-light-bulbs.gif)
 
 ## Automatic removal of BOM
-To make sure that Bower is always able to read the bower.json file,
-Visual Studio automatically strips the Byte Order Mark (BOM) when
-the file is saved.
+To make sure that Bower is always able to read the bower.json file, Visual Studio automatically strips the Byte Order Mark (BOM) when the file is saved.
 
 <aside role="complementary">
 

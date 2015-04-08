@@ -6,7 +6,7 @@
 	keywords="html, intellisense, html5, xhtml, autocomplete"
 />
 
-## Basic auto-completion
+## Auto-completion
 The HTML editor's up-to-date web standards definitions provide accurate and fast [IntelliSense](http://go.microsoft.com/fwlink/?LinkId=532997) for all elements and attributes. For attributes, IntelliSense lists available values as well as names.
 
 ![Basic auto completion](_assets/html-auto-completion.gif)
