@@ -1,4 +1,4 @@
-﻿<properties
+<properties
 	pageTitle="Server-side"
 	description="Visual Studio has excellent support for many types of server-side frameworks targeting a wide variety of platforms and technologies."
 	slug="server-side"
@@ -6,40 +6,27 @@
 />
 
 ## ASP.NET
-ASP.NET is a free, open source web framework for building great Web sites and 
-Web applications using HTML, CSS and JavaScript. 
-
-You can also create Web APIs, mobile sites, use real-time technologies 
-like Web Sockets and more!
+ASP.NET is a free, open source web framework for building great web sites and web applications using HTML, CSS, and JavaScript. You can also create Web APIs and mobile sites, use real-time technologies 
+like Web Sockets, and more.
 
 - [ASP.NET on Github](https://github.com/aspnet/home/)
 - [Roslyn C# compiler on Github](https://github.com/dotnet/roslyn/)
 
 ## Django (Python)
-Python Tools for Visual Studio includes full support for the Djano
-web framework.
+Python Tools for Visual Studio includes full support for the Django web framework.
 
 - [Download Python Tools](https://visualstudiogallery.msdn.microsoft.com/9ea113de-a009-46cd-99f5-65ef0595f937)
 - [Python Tools on Codeplex](http://pytools.codeplex.com/)
 
 ## Express (Node.js)
-Node.js Tools for Visual Studio (NTVS) is a free, open source plugin that turns Visual Studio into a Node.js IDE. 
-
-NTVS supports Editing, Intellisense, Profiling, npm, TypeScript, Debugging locally 
-and remotely (Windows/MacOS/Linux), as well Azure Web Sites and Cloud Service.
-
-Designed, developed, and supported by Microsoft and the community.
+Node.js Tools for Visual Studio (NTVS) is a free, open source plugin that turns Visual Studio into a Node.js IDE. NTVS supports editing, [IntelliSense](http://go.microsoft.com/fwlink/?LinkId=532997), profiling, npm, TypeScript, debugging locally 
+and remotely (Windows/MacOS/Linux), and Azure App Service and Cloud Services.
 
 - [Download Node Tools on Codeplex](http://nodejstools.codeplex.com/)
 
 ## PHP
-PHP Tools transparently integrate into Microsoft Visual Studio, and extend it 
-with the support for PHP language. The extension is focused on developer 
-productivity respecting conventions. 
-
-It understands your code, provides smart 
-code completion, quick navigation, syntax error checking, integrated PHP manual, 
-project system, debugging support and more.
+PHP Tools focus on developer productivity, while respecting conventions. They provide smart 
+code completion, quick navigation, syntax error checking, an integrated PHP manual, a project system, debugging support, and more.
 
 - [Download PHP Tools](https://visualstudiogallery.msdn.microsoft.com/6eb51f05-ef01-4513-ac83-4c5f50c95fb5)
 
