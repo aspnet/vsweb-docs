@@ -1,6 +1,6 @@
 <properties
 			pageTitle="JavaScript"
-			description="The new JavaScript editor in Visual Studio supports EcmaScript 6 and has the most advanced Intellisense engine on the market."
+			description="The JavaScript editor in Visual Studio supports EcmaScript 6 and has the most advanced IntelliSense engine on the market."
 			slug="javascript"
 			order="300"
 			keywords="javascript, jscript, script, dhtml, es3, es5, es6"

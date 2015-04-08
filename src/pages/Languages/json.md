@@ -1,6 +1,6 @@
 <properties
 			pageTitle="JSON"
-			description="The brand new JSON editor in Visual Studio is the first of its kind to fully support JSON Schema."
+			description="The JSON editor in Visual Studio is the first of its kind to fully support JSON Schema."
 			slug="json"
 			keywords="json, jsonp, javascript object notation"
 />
@@ -13,7 +13,7 @@ You can even type the colon before the closing quote of a property name to save 
 ![Basic JSON auto-completion](_assets/json-basic-auto-completion.gif)
 
 ## JSON Schema
-The JSON editor in Visual Studio is the first of its kind to fully support the [JSON Schema](http://json-schema.org) standard. This results in IntelliSense and validation for some of the most common JSON file formats.
+The JSON editor in Visual Studio is the first of its kind to fully support the [JSON Schema](http://json-schema.org) standard. This results in [IntelliSense](https://msdn.microsoft.com/library/hcw1s69b.aspx) and validation for some of the most common JSON file formats.
 
 This example shows what it's like working with a 
 [Web Manifest](http://www.w3.org/TR/appmanifest/) JSON document.
