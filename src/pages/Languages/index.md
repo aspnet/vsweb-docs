@@ -8,7 +8,4 @@
 
 ![Languages](_assets/index-languages.png)
 
-Use the language that makes you happy and productive. 
-Move between languages and project types with ease using 
-the best HTML 5, CSS 3, and JavaScript editor in the world. Tap into the power of LESS, and Sass so front-end developers can 
-join in the fun. 
+Visual Studio has the best HTML 5, CSS 3, JavaScript, and JSON editor in the world. Tap into the power of LESS, and Sass, use PHP, Python, or C# with ASP.NET,  -- all the popular languages are supported and you can move between languages and project types with ease.  

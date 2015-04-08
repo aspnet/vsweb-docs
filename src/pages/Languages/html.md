@@ -7,7 +7,7 @@
 />
 
 ## Basic auto-completion
-The HTML editor's up-to-date web standards definitions provide accurate and fast [IntelliSense](https://msdn.microsoft.com/library/hcw1s69b.aspx) for all elements and attributes. For attributes, IntelliSense lists available values as well as names.
+The HTML editor's up-to-date web standards definitions provide accurate and fast [IntelliSense](http://go.microsoft.com/fwlink/?LinkId=532997) for all elements and attributes. For attributes, IntelliSense lists available values as well as names.
 
 ![Basic auto completion](_assets/html-auto-completion.gif)
 

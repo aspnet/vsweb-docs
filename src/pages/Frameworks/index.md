@@ -1,4 +1,4 @@
-﻿<properties
+<properties
 	pageTitle="Frameworks"
 	description="A large number of both clint- and server-side frameworks have first-class support in Visual Studio."
 	slug="frameworks"
@@ -8,7 +8,4 @@
 
 ![Frameworks](_assets/index-frameworks.png)
 
-Choose your frameworks or mix and match. Visual Studio includes 
-Intellisense for your client-side JavaScript and also lights up 
-with advanced support for today's most popular web frameworks 
-like Angular and Bootstrap.
+Visual Studio provides advanced support including [IntelliSense](http://go.microsoft.com/fwlink/?LinkId=532997) for today's most popular web frameworks,  such as Angular and Bootstrap.

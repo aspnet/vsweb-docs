@@ -7,14 +7,12 @@
 />
 
 ## C++
-use the powerful and flexible Visual C++ language, with the tools 
-to enable the development of native Windows apps, native desktop apps, and managed apps that run on the .NET Framework.
+use the powerful and flexible Visual C++ language, with the tools to enable the development of native Windows apps, native desktop apps, and managed apps that run on the .NET Framework.
 
 ![C++](_assets/other-cplusplus.png)
 
 ## CoffeeScript
-Syntax highlighting and code folding is supported in the built-in
-CoffeeScript editor. This includes support for IcedCoffeeScript.
+Syntax highlighting and code folding is supported in the built-in CoffeeScript editor. This includes support for IcedCoffeeScript.
 
 ![CoffeeScript](_assets/other-coffeescript.png)
 
@@ -39,7 +37,7 @@ Web Essentials also shows a preview window of the rendered output and supports c
 - [Web Essentials on GitHub](https://github.com/madskristensen/webessentials2015/)
 
 ## Node.js
-NTVS is a free, open source plugin that turns Visual Studio into a Node.js IDE. NTVS supports editing, IntelliSense, profiling, npm, TypeScript, debugging locally and remotely (Windows/MacOS/Linux), and Azure App Service Web Apps and Cloud Services.
+NTVS is a free, open source plugin that turns Visual Studio into a Node.js IDE. NTVS supports editing, [IntelliSense](http://go.microsoft.com/fwlink/?LinkId=532997), profiling, npm, TypeScript, debugging locally and remotely (Windows/MacOS/Linux), and Azure App Service Web Apps and Cloud Services.
 
 NTVS is designed, developed, and supported by Microsoft and the community.
 

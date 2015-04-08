@@ -7,7 +7,7 @@
 />
 
 ## Basic auto-completion
-The JavaScript [IntelliSense](https://msdn.microsoft.com/library/hcw1s69b.aspx) engine is powered by Internet Explorer's JavaScript execution engine, Chakra. 
+The JavaScript [IntelliSense](http://go.microsoft.com/fwlink/?LinkId=532997) engine is powered by Internet Explorer's JavaScript execution engine, Chakra. 
 
 That means that all your JavaScript code is executed in the background to provide the ultimate IntelliSense experience.
 

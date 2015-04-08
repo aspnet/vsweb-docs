@@ -7,7 +7,7 @@
 />
 
 ## Auto-completion
-Visual Studio [IntelliSense](https://msdn.microsoft.com/library/hcw1s69b.aspx) is always up-to-date with the latest web standards. You get accurate hints for classes, IDs and attribute names and values, which can sometimes be hard to remember.
+Visual Studio [IntelliSense](http://go.microsoft.com/fwlink/?LinkId=532997) is always up-to-date with the latest web standards. You get accurate hints for classes, IDs and attribute names and values, which can sometimes be hard to remember.
 
 ![Advanced auto completion](_assets/css-advanced-auto-completion.gif)
 

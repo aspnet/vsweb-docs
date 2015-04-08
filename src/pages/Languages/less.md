@@ -12,7 +12,7 @@ Quickly access your variables from the current document or any imported files. T
 ![LESS variables](_assets/less-variables.gif)
 
 ## Mixins
-The editor provides both [IntelliSense](https://msdn.microsoft.com/library/hcw1s69b.aspx) and tooltips for Mixins in the same file as well as across imported files.
+The editor provides both [IntelliSense](http://go.microsoft.com/fwlink/?LinkId=532997) and tooltips for Mixins in the same file as well as across imported files.
 
 ![LESS mixins](_assets/less-mixins.gif)
 
