@@ -49,4 +49,4 @@ Keep your CSS file nice and organized using hierarchical indentation. The indent
 coming soon...
 
 ## Open source
-The entire CSS language definition that Visual Studio uses is open source. Find a missing property or pseudo-selector? Send a pull request.
+The entire [CSS language definition](http://schemastore.org/css) that Visual Studio uses is open source. Find a missing property or pseudo-selector? Send a pull request.
