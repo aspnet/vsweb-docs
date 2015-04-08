@@ -1,40 +1,31 @@
-﻿<properties
+<properties
 	pageTitle="Grunt"
-	description="Visual Studio has first-class support for the node.js based Grunt task runner."
+	description="Visual Studio has first-class support for the node.js-based Grunt task runner."
 	slug="grunt"
 	keywords="grunt, gruntjs, grunt.js, task runner"
 />
 
-## Intellisense for gruntfile.js
-You get auto-completion for the `grunt` object as well as for the
-configuration of the variuos different Grunt tasks.
+## IntelliSense for gruntfile.js
+You get [auto-completion](http://go.microsoft.com/fwlink/?LinkId=532997) for the `grunt` object as well as for the configuration of Grunt tasks.
 
 ![Grunt auto-completion](_assets/grunt-auto-completion.gif)
 
-Using the [Web Essentials](http://vswebessentials.com) extension
-you also get completion for loading npm tasks.
+The [Web Essentials](http://vswebessentials.com) extension provides auto-completion for loading npm tasks.
 
 ![Grunt load npm tasks](_assets/grunt-loadnpmtasks.png)
 
 ## Snippets
-Create a new gruntfile.js very easily using the built-in snippet provided
-by the JavaScript editor.
-
-Expand the snippet by typing `grunt` and hitting `Tab`.
+Create a new gruntfile.js is easy using the built-in snippet provided by the JavaScript editor. Expand the snippet by typing `grunt` and hitting `Tab`.
 
 ![Grunt snippet](_assets/grunt-snippets.gif)
 
 ## Task Runner Explorer
-Use Visual Studio's Task Runner Explorer window to interact with Grunt.
-
-Get an overview of your tasks and execute them directly from within
-Visual Studio.
+Use Visual Studio's Task Runner Explorer window to interact with Grunt. Get an overview of your tasks, and execute them directly from within Visual Studio.
 
 ![Grunt in Task Runner Explorer](_assets/grunt-task-runner-explorer.gif)
 
 ## Custom task bindings
-Incorporate Grunt tasks into your natural workflow by associating your task
-with Visual Studio events.
+Incorporate Grunt tasks into your natural workflow by associating your task with Visual Studio events.
 
 ![Grunt task bindings](_assets/grunt-task-bindings.gif)
 

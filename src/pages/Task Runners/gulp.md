@@ -1,4 +1,4 @@
-﻿<properties
+<properties
 	pageTitle="Gulp"
 	description="Visual Studio has first-class support for the node.js based Gulp task runner."
 	slug="gulp"
@@ -6,30 +6,21 @@
 />
 
 ## Intellisense for gulpfile.js
-The JavaScript editor provides a great editing experience when it comes
-to Gulp. 
-
-You get full Intellisense for Gulp as well as other Node.js modules
-used in your gulpfile.js.
+The JavaScript editor provides a great editing experience for Gulp. You get full [IntelliSense](http://go.microsoft.com/fwlink/?LinkId=532997) for Gulp as well as other Node.js modules used in your gulpfile.js.
 
 ![Intellisense for gulpfile.js](_assets/gulp-auto-completion.gif)
 
-Using the [Web Essentials](http://vswebessentials.com) extension
-you also get completion for loading node modules.
+The [Web Essentials](http://vswebessentials.com) extension also provides auto-completion for loading node modules.
 
 ![Gulp require](_assets/gulp-require.png)
 
 ## Task Runner Explorer
-Use Visual Studio's Task Runner Explorer window to interact with Gulp.
-
-Get an overview of your tasks and execute them directly from within
-Visual Studio.
+Use Visual Studio's Task Runner Explorer window to interact with Gulp. Get an overview of your tasks and execute them directly from within Visual Studio.
 
 ![Gulp in Task Runner Explorer](_assets/gulp-task-runner-explorer.gif)
 
 ## Custom task bindings
-Incorporate Gulp tasks into your natural workflow by associating your task
-with Visual Studio events.
+Incorporate Gulp tasks into your natural workflow by associating your task with Visual Studio events.
 
 ![Gulp task bindings](_assets/gulp-task-bindings.gif)
 
