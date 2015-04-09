@@ -41,7 +41,7 @@ paths into CSS documents.
 ![CSS file picker](_assets/css-file-picker.gif)
 
 ## Hierarchical indentation
-Keep your CSS file nice and organized using hierarchical indentation. The indentation of the CSS rulesets are based on the cascading order of the selectors. to format the document just press `Ctrl+K+D`.
+Keep your CSS file nice and organized using hierarchical indentation. The indentation of the CSS rulesets is based on the cascading order of the selectors. To format the document just press `Ctrl+K+D`.
 
 ![CSS hierarchical indentation](_assets/css-hierarchical-indentation.png)
 

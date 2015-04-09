@@ -1,6 +1,6 @@
 <properties
 	pageTitle="HTML"
-	description="The HTML editor was completely rewritten in Visual Studio 2013 to create a foundation for great HTML 5 editing experience that is constantly getting better."
+	description="The HTML editor was completely rewritten in Visual Studio 2013 to create a foundation for a great HTML 5 editing experience that is constantly getting better."
 	slug="html"
 	order="200"
 	keywords="html, intellisense, html5, xhtml, autocomplete"
@@ -34,12 +34,12 @@ Simply hit `Shift+Alt+W` to wrap the selection.
 ![Wrap with tag](_assets/html-wrap-with-tag.gif)
 
 ## Snippets
-Snippets provides a shortcut for adding common elements to a page. Visual Studio has built-in snippets for `<video>`, `<audio>`, `<picture>`, and many more. You can create your own snippets as well.
+Snippets provide a shortcut for adding common elements to a page. Visual Studio has built-in snippets for `<video>`, `<audio>`, `<picture>`, and many more. You can create your own snippets as well.
 
 ![Snippets](_assets/html-snippets.gif)
 
 ## File picker
-The file picker gives you an easy way to add referenes to files in your project. It's smart enough to know what files you would typically use for `<img>`, `<a>`, `<script>`, `<source>` and `<link>` elements, so it automatically filters the list to only show those file types.
+The file picker gives you an easy way to add references to files in your project. It's smart enough to know what files you would typically use for `<img>`, `<a>`, `<script>`, `<source>` and `<link>` elements, so it automatically filters the list to show only those file types.
 
 ![File picker](_assets/html-file-picker.gif)
 

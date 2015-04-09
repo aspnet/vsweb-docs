@@ -17,4 +17,4 @@ The editor provides both [IntelliSense](http://go.microsoft.com/fwlink/?LinkId=5
 ![LESS mixins](_assets/less-mixins.gif)
 
 ## Go to definition
-Easily jump between Mixins and variable references using `F12` to go to the definition. This works for any references even across multiple files and imports.
+Easily jump between Mixins and variable references using `F12` to go to the definition. This works for any references, even across multiple files and imports.

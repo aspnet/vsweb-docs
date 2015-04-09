@@ -6,10 +6,8 @@
 			keywords="javascript, jscript, script, dhtml, es3, es5, es6"
 />
 
-## Basic auto-completion
-The JavaScript [IntelliSense](http://go.microsoft.com/fwlink/?LinkId=532997) engine is powered by Internet Explorer's JavaScript execution engine, Chakra. 
-
-That means that all your JavaScript code is executed in the background to provide the ultimate IntelliSense experience.
+## Auto-completion
+The JavaScript [IntelliSense](http://go.microsoft.com/fwlink/?LinkId=532997) engine is powered by Internet Explorer's JavaScript execution engine, Chakra. That means that all your JavaScript code is executed in the background to provide the ultimate IntelliSense experience.
 
 ![JavaScript basic auto completion](_assets/javascript-basic-auto-completion.gif)
 

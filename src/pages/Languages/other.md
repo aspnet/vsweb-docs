@@ -7,12 +7,12 @@
 />
 
 ## C++
-use the powerful and flexible Visual C++ language, with the tools to enable the development of native Windows apps, native desktop apps, and managed apps that run on the .NET Framework.
+Use the powerful and flexible Visual C++ language, with the tools to enable the development of native Windows apps, native desktop apps, and managed apps that run on the .NET Framework.
 
 ![C++](_assets/other-cplusplus.png)
 
 ## CoffeeScript
-Syntax highlighting and code folding is supported in the built-in CoffeeScript editor. This includes support for IcedCoffeeScript.
+The built-in CoffeeScript editor supports syntax highlighting, code folding, and IcedCoffeeScript.
 
 ![CoffeeScript](_assets/other-coffeescript.png)
 
@@ -44,10 +44,7 @@ NTVS is designed, developed, and supported by Microsoft and the community.
 - [Download Node Tools on Codeplex](http://nodejstools.codeplex.com/)
 
 ## PHP
-PHP Tools transparently integrate into Microsoft Visual Studio and extend it with support for the PHP language. The extension is focused on developer productivity, respecting conventions. 
-
-PHP Tools understands your code, provides smart code completion, quick navigation, syntax error checking, integrated PHP manual, 
-project system, debugging support, and more.
+PHP Tools provides smart code completion, quick navigation, syntax error checking, an integrated PHP manual, a project system, debugging support, and more.
 
 - [Download PHP Tools](https://visualstudiogallery.msdn.microsoft.com/6eb51f05-ef01-4513-ac83-4c5f50c95fb5)
 
@@ -74,7 +71,7 @@ Visual Basic .NET is engineered for productively building type-safe and object-o
 ![Visual Basic .NET](_assets/other-visual-basic.png)
 
 ## YAML
-A YAML editor is provided by the free extension [YAML Editor](https://visualstudiogallery.msdn.microsoft.com/34423c06-f756-4721-8394-bc3d23b91ca7). It gives syntax highlighting, error detection, formatting and more.
+The free extension [YAML Editor](https://visualstudiogallery.msdn.microsoft.com/34423c06-f756-4721-8394-bc3d23b91ca7) provides syntax highlighting, error detection, formatting and more.
 
 ![YAML](_assets/other-yaml.png)
 
