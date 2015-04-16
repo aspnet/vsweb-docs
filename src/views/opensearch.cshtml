@@ -1,0 +1,17 @@
+﻿@using config = System.Configuration.ConfigurationManager;
+@{
+    string baseUrl = Request.Url.Scheme + "://" + Request.Url.Authority;
+    string theme = config.AppSettings["theme"];
+    string name = config.AppSettings["name"];
+
+    Response.ContentType = "text/xml";
+}
+
+<opensearchdescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+    <shortname>@name Search</shortname>
+    <description>@name</description>
+    <url type="text/html" method="get" template="@baseUrl/search/{searchTerms}" />
+    <image width="16" height="16">@baseUrl/themes/@theme/favicon/favicon.ico</image>
+    <inputencoding>UTF-8</inputencoding>
+    <searchform>@baseUrl</searchform>
+</opensearchdescription>
