@@ -12,6 +12,13 @@ This is a must-have extension for any web developer. It's where the Visual Studi
 - [Download Web Essentials](https://visualstudiogallery.msdn.microsoft.com/ee6e6d8c-c837-41fb-886a-6b50ae2d06a2)
 - [Web Essentials on GitHub](https://github.com/madskristensen/webessentials2015/)
 
+## Image Optimizer
+Another must-have extension that takes the pain out of optimizing PNG, JPG and Gif
+images without compromising the quality of the image.
+
+- [Download Image Optimizer](https://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3)
+- [Image Optimizer on GitHub](https://github.com/madskristensen/ImageOptimizer/)
+
 ## SideWaffle
 SideWaffle adds a bunch of useful snippets, project templates, and item templates to Visual Studio.
 
