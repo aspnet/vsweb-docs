@@ -19,6 +19,19 @@ images without compromising the quality of the image.
 - [Download Image Optimizer](https://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3)
 - [Image Optimizer on GitHub](https://github.com/madskristensen/ImageOptimizer/)
 
+## Bundler &amp; Minifier
+Adds support for bundling and minifying JavaScript, CSS and HTML files in any project.
+
+- [Download Bundler &amp; minifier](https://visualstudiogallery.msdn.microsoft.com/9ec27da7-e24b-4d56-8064-fd7e88ac1c40)
+- [Bundler &amp; Minifier on GitHub](https://github.com/madskristensen/BundlerMinifier/)
+
+## Web Compiler
+The easiest and most powerful way to compile LESS, Scss and CoffeeScript files
+directly within Visual Studio or through MSBuild.
+
+- [Download Web Compiler](https://visualstudiogallery.msdn.microsoft.com/3b329021-cd7a-4a01-86fc-714c2d05bb6c)
+- [Web Compiler on GitHub](https://github.com/madskristensen/WebCompiler/)
+
 ## SideWaffle
 SideWaffle adds a bunch of useful snippets, project templates, and item templates to Visual Studio.
 
