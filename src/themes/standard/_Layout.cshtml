@@ -76,7 +76,7 @@
         </div>
 
         <div class="container">
-            <main role="main">
+            <main>
                 @if (PageSystem.GetCurrentPage(Request).Parent != null)
                 {
                     @Helpers.RenderBreadcrumb(PageSystem.GetCurrentPage(Request))
@@ -84,7 +84,7 @@
                 @RenderBody()
             </main>
 
-            <nav id="nav" role="navigation">
+            <nav id="nav">
                 <a href="/#" id="burger" aria-haspopup="true">Menu&nbsp;&nbsp;&nbsp;</a>
 
                 <form id="search" role="search" method="get" action="/search/">
