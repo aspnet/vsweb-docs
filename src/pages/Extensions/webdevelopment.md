@@ -110,6 +110,11 @@ A snippet pack to make you more productive working with React.js. Based on the s
 - [Download React Snippet Pack](https://visualstudiogallery.msdn.microsoft.com/234d79e9-f0fd-41e1-a926-850da8e8c7d7)
 - [React Snippet Pack on GitHub](https://github.com/madskristensen/ReactSnippetPack/)
 
+## Indent Guides
+Displays indent and page width guides in Visual Studio text editor windows.
+
+- [Download Indent Guides](https://visualstudiogallery.msdn.microsoft.com/e792686d-542b-474a-8c55-630980e72c30)
+
 <aside role="complementary">
 
 ## Related resources
