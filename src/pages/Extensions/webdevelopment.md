@@ -61,7 +61,7 @@ Visual Studio. It also supports running in the TeamCity continuous integration c
 JSLint.NET is a wrapper for Douglas Crockford's JSLint, the JavaScript code quality tool. It can validate JavaScript anywhere .NET runs.
 
 - [Download JSLint.NET](https://visualstudiogallery.msdn.microsoft.com/ede12aa8-0f80-4e6f-b15c-7a8b3499370e)
-- [JSLint on CodePlex](https://jslintnet.codeplex.com/)
+- [JSLint.NET on GitHub](https://github.com/benquarmby/jslintnet/)
 
 ## Bootstrap Snippet Pack
 The ultimate snippet pack for web developers who use the Twitter Bootstrap framework.
