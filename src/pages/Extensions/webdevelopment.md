@@ -66,7 +66,7 @@ JSLint.NET is a wrapper for Douglas Crockford's JSLint, the JavaScript code qual
 ## Bootstrap Snippet Pack
 The ultimate snippet pack for web developers who use the Twitter Bootstrap framework.
 
-- [Download Bootstrap Snippet Pack](https://visualstudiogallery.msdn.microsoft.com/ede12aa8-0f80-4e6f-b15c-7a8b3499370e)
+- [Download Bootstrap Snippet Pack](https://visualstudiogallery.msdn.microsoft.com/e82e7862-f731-4183-a27a-3a44b261bfe5)
 - [Bootstrap Snippet Pack on GitHub](https://github.com/elebetsamer/bootstrap-snippets-visual-studio/)
 
 ## DocStubJs
@@ -109,6 +109,18 @@ A snippet pack to make you more productive working with React.js. Based on the s
 
 - [Download React Snippet Pack](https://visualstudiogallery.msdn.microsoft.com/234d79e9-f0fd-41e1-a926-850da8e8c7d7)
 - [React Snippet Pack on GitHub](https://github.com/madskristensen/ReactSnippetPack/)
+
+## Broccoli Task Runner
+Adds support for Broccoli brocfile.js files as well as Ember-CLI's ember-cli-build.js build scripts based on Broccoli.
+
+- [Download Broccoli Task Runner](https://visualstudiogallery.msdn.microsoft.com/dd19e6af-a1f7-4606-a82a-46833f810865)
+- [Broccoli Task Runner on GitHub](https://github.com/RyannosaurusRex/BroccoliTaskRunner/)
+
+## NPM Script Task Runner
+Adds support for package.json's NPM scripts in the Task Runner Explorer
+
+- [Download NPM Scripts Task Runner](https://visualstudiogallery.msdn.microsoft.com/8f2f2cbc-4da5-43ba-9de2-c9d08ade4941)
+- [NPM Scripts Task Runner on GitHub](https://github.com/madskristensen/NpmTaskRunner/)
 
 <aside role="complementary">
 
