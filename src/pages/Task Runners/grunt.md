@@ -45,6 +45,8 @@ Incorporate Grunt tasks into your natural workflow by associating your task with
 
 ### Relevant extensions
 
+- [Broccoli Task Runner](https://visualstudiogallery.msdn.microsoft.com/dd19e6af-a1f7-4606-a82a-46833f810865)
+- [NPM Scripts Task Runner](https://visualstudiogallery.msdn.microsoft.com/8f2f2cbc-4da5-43ba-9de2-c9d08ade4941)
 - [Web Essentials](https://visualstudiogallery.msdn.microsoft.com/ee6e6d8c-c837-41fb-886a-6b50ae2d06a2)
 - [Grunt Launcher](https://visualstudiogallery.msdn.microsoft.com/dcbc5325-79ef-4b72-960e-0a51ee33a0ff)
 - [Task Runner Explorer](https://visualstudiogallery.msdn.microsoft.com/8e1b4368-4afb-467a-bc13-9650572db708)
