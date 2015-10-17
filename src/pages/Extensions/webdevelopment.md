@@ -117,10 +117,16 @@ Adds support for Broccoli brocfile.js files as well as Ember-CLI's ember-cli-bui
 - [Broccoli Task Runner on GitHub](https://github.com/RyannosaurusRex/BroccoliTaskRunner/)
 
 ## NPM Script Task Runner
-Adds support for package.json's NPM scripts in the Task Runner Explorer
+Adds support for package.json's NPM scripts in the Task Runner Explorer.
 
 - [Download NPM Scripts Task Runner](https://visualstudiogallery.msdn.microsoft.com/8f2f2cbc-4da5-43ba-9de2-c9d08ade4941)
 - [NPM Scripts Task Runner on GitHub](https://github.com/madskristensen/NpmTaskRunner/)
+
+## Brunch Task Runner
+Adds support for the Brunch build tool in Visual Studio 2015's Task Runner Explorer.
+
+- [Download Brunch Task Runner](https://visualstudiogallery.msdn.microsoft.com/de706ad0-8a73-4df3-bef5-867bb9a70d51)
+- [Brunch Task Runner on GitHub](https://github.com/madskristensen/BrunchTaskRunner/)
 
 <aside role="complementary">
 
