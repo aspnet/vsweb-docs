@@ -32,6 +32,14 @@ directly within Visual Studio or through MSBuild.
 - [Download Web Compiler](https://visualstudiogallery.msdn.microsoft.com/3b329021-cd7a-4a01-86fc-714c2d05bb6c)
 - [Web Compiler on GitHub](https://github.com/madskristensen/WebCompiler/)
 
+## Web Analyzer
+Provides static analysis directly in Visual Studio for
+JavaScript, TypeScript, JSX, CSS and more. It uses the latest
+versions of ESLint, TSLint, CSSLint and CoffeeLint.
+
+- [Download Web Analyzer](https://visualstudiogallery.msdn.microsoft.com/6edc26d4-47d8-4987-82ee-7c820d79be1d)
+- [Web Analyzer on GitHub](https://github.com/madskristensen/WebAnalyzer/)
+
 ## SideWaffle
 SideWaffle adds a bunch of useful snippets, project templates, and item templates to Visual Studio.
 
