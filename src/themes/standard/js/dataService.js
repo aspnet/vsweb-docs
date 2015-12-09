@@ -16,7 +16,7 @@
 		xhr.setRequestHeader("X-Content-Only", "1");
 		xhr.onreadystatechange = function () {
 			if (xhr.readyState === 4 && xhr.status === 200) {
-				var page = { url: url, content: xhr.responseText, title: xhr.getResponseHeader("X-Title"), next: xhr.getResponseHeader("X-Next"), prev: xhr.getResponseHeader("X-Prev") };
+			    var page = { url: url, content: xhr.responseText, title: decodeURIComponent(xhr.getResponseHeader("X-Title")), next: xhr.getResponseHeader("X-Next"), prev: xhr.getResponseHeader("X-Prev") };
 				pageCache[url] = page;
 				callback(page);
 			}
