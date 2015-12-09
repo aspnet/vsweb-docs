@@ -36,7 +36,7 @@
 			@Helpers.RenderBreadcrumb(PageSystem.GetCurrentPage(Request))
 		}
 
-		Response.Headers.Add("X-Title", Page.Title);
+	    Response.Headers.Add("X-Title", HttpUtility.UrlEncode(Page.Title));
 
 		if (next != null)
 		{
