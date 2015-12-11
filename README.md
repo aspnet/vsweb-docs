@@ -45,6 +45,9 @@ The website itself is really simple. It consists of a single
 `index.cshtml` file. The entire site is built up around Markdown (`.md`) files
 located inside the `pages` directory by default.
 
+If need to deploy to the IIS, need to install the
+<http://www.iis.net/downloads/microsoft/url-rewrite>
+
 #### Folder structure
 
 The folder structure determines how the menu is constructed as well as the

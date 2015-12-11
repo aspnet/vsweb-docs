@@ -136,6 +136,12 @@ Adds support for the Brunch build tool in Visual Studio 2015's Task Runner Explo
 - [Download Brunch Task Runner](https://visualstudiogallery.msdn.microsoft.com/de706ad0-8a73-4df3-bef5-867bb9a70d51)
 - [Brunch Task Runner on GitHub](https://github.com/madskristensen/BrunchTaskRunner/)
 
+## WebPack Task Runner
+Adds support for WebPack in Visual Studio 2015's Task Runner Explorer.
+
+- [Download WebPack Task Runner](https://visualstudiogallery.msdn.microsoft.com/5497fd10-b1ba-474c-8991-1438ae47012a)
+- [WebPack Task Runner on GitHub](https://github.com/madskristensen/WebPackTaskRunner/)
+
 <aside role="complementary">
 
 ## Related resources
