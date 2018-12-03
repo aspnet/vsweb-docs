@@ -106,6 +106,6 @@ To help make sure that each pull request meets the requirements of the metadata,
 the validator helps guide the contributors to write valid `.md` files for 
 the MarkSite instance.
 
-When using AppVeyor, each pull requests is automatically being build and the 
+When using AppVeyor, each pull request is automatically being built and the 
 validator will automatically fail the build in case the pull request isn't
 satisfying the validator.
